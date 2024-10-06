@@ -1,4 +1,22 @@
-# 網頁切版直播班 Vite 範例 - Bootstrap 版本
+# Pawfect 專題開發規範
+
+## GIT版控規範
+  - 開發前記得fetch最新版本，確認無誤合併後進行開發
+  - 在dev分支上開"feature/自訂名稱"分支開發
+  - 開發完畢push後，透過 GitHub申請一個 dev 合併 "feature/自訂名稱" 進度的PR
+  - 全員確認沒問題後，Chung 審核 PR 通過 merge 進dev
+  - 最終確認dev版本沒問題再合併到 main 分支，並進行後續deploy部屬到gh-page
+  - 如遇衝突不知如何解決，可先在discord討論
+
+## 程式碼規範
+  - 開發時確認關閉自動排版功能，避免影響其他人的code
+  - 共同頁面，請在各自區塊內更新自己的code
+  - 命名時開頭先以頁面再以各自區塊開頭命名，例如index的banner區塊命名時以"index-banner-名稱"作命名
+  - 可以的話，將自己區塊的class包在最外層的class內
+  - 自己寫顏色樣式的時候，請使用寫好的變數，例如$primary
+  - 不確定時皆可先discord討論~~
+
+
 
 ## Node.js 版本
   - 專案的 Node.js 版本需為 v16 以上

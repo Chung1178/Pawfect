@@ -1,9 +1,19 @@
-//  banner / Chung 
+//  banner / Chung
 
-//  保母服務 / Joy 
+//  保母服務 / Joy
 
-//  毛孩爸媽怎麼說 / Tim 
+//  毛孩爸媽怎麼說 / Tim
+.index-comment {
+  @include media-breakpoint-up(md) {
+    background-image: url("../images/bg-comment-1.png"),
+      url("../images/bg-comment-2.png"), url("../images/dog.png"),
+      url("../images/bg-comment-3.png");
+    background-repeat: no-repeat;
+    background-position: left 68% top 0%, left 0 bottom 0, left 45px bottom 0,
+      left 2px bottom 0;
+  }
+}
 
-//  預定體驗 / Grace 
+//  預定體驗 / Grace
 
-//  常見問題 / Joy 
+//  常見問題 / Joy

@@ -512,7 +512,9 @@ $spacers: (
   38: $spacer * 9.5,  // 152
   39: $spacer * 9.75, // 156
   40: $spacer * 10,   // 160
-  50: $spacer * 12.5  // 200
+  46: $spacer * 11.5, // 184
+  50: $spacer * 12.5,  // 200
+  55: $spacer * 13.75 // 220
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -1369,7 +1371,7 @@ $dropdown-link-color:               var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
 $dropdown-link-hover-bg:            var(--#{$prefix}tertiary-bg) !default;
 
-$dropdown-link-active-color:        $component-active-color !default;
+$dropdown-link-active-color:        $primary; //$component-active-color !default;
 $dropdown-link-active-bg:           $component-active-bg !default;
 
 $dropdown-link-disabled-color:      var(--#{$prefix}tertiary-color) !default;

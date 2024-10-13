@@ -1,0 +1,54 @@
+.seacrch-banner {
+  background-image: url('../images/search-page/banner-top-circle-sm.svg'),
+                    url('../images/search-page/banner-top-line-sm.svg'),
+                    url('../images/search-page/banner-bottom-circle-sm.svg'),
+                    url('../images/search-page/banner-bottom-line-sm.svg');
+  background-repeat: no-repeat;
+  background-position: top right, top right, left bottom, left bottom;
+
+  @include media-breakpoint-up(lg) {
+    background-image: url('../images/search-page/banner-top-circle-md.svg'),
+                      url('../images/search-page/banner-top-line-md.svg'),
+                      url('../images/search-page/banner-bottom-circle-md.svg'),
+                      url('../images/search-page/banner-bottom-line-md.svg');
+    background-position: top right 6%, top 28% right 6%, bottom left 6%, bottom left 6%;
+    background-repeat: no-repeat;
+  }
+}
+
+.seacrch-banner,
+.sitter-search-modal {
+  .dropdown-menu {
+    top: 8px !important;
+  }
+
+  .type-select-btn{
+    color: $gray-300;
+    border-bottom: 3px solid transparent;
+    &:hover,
+    &.active {
+      color: $primary;
+    }
+    &.active {
+      border-bottom: 3px solid $primary;
+    }
+  }
+  .city-select-container {
+    height: 150px;
+    overflow-y: scroll;
+  }
+  #date-picker-desk,
+  #date-picker-phone {
+    cursor: pointer;
+  }
+  #date-picker-desk:focus,
+  #date-picker-phone:focus {
+    outline: none;
+  }
+}
+
+.sitter-search-modal {
+  .type-select-btn{
+    color: $gray-500;
+  }
+}

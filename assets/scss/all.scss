@@ -13,10 +13,15 @@
 
 @import "./base/base";
 @import "./component/card";
+@import './component/dropdown';
+@import './component/button';
+@import './component/pagination';
 
 @import "./utils/helper";
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
 @import "./pages/index.scss";
+@import './pages/search';
 @import "./vendor/swiper";
+@import './vendor/date-picker';

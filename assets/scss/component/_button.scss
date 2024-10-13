@@ -1,0 +1,11 @@
+.btn {
+  padding: 14.5px 2rem;
+  line-height: 1.2;
+}
+.btn-primary {
+  color: $light;
+  &:hover {
+    background-color: $primary-100;
+    color: $light;
+  }
+}

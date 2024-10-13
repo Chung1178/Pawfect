@@ -1,0 +1,318 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 確保頁面高度至少是視窗高度 */
+}
+
+.position-relative {
+    flex-grow: 1; /* 讓主要內容撐滿剩餘的高度 */
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+
+
+.booking-wrap {
+    height: 100vh;
+    //max-height: 900px;
+  }
+  //50%背景
+  .booking-wrap-background {
+    position: relative;
+    padding-top: 6.25rem;
+    width: 100%;
+    z-index: 1;
+    //height: 100%;
+    height: 100vh;
+    //max-height: 900px;
+    max-height: 900px;
+    background: linear-gradient(90deg, #ffab82 0%, #f6844d 50%, #ffab82 100%);
+    @include media-breakpoint-up(md) {
+      height: 50vh;
+      max-height: 450px;
+    }
+  }
+  
+  .booking-wrap-background::before {
+    content: "";
+    position: absolute;
+    background-image: url("/assets/images/背景上方圓圈.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 15vw;
+    z-index: -1;
+  }
+  
+  .booking-wrap-background::after {
+    content: "";
+    position: absolute;
+    background-image: url("/assets/images/背景下方圓圈.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    bottom: 0;
+    right: 0;
+    width: 30vw;
+    height: 15vw;
+    z-index: -1;
+  }
+  
+  .wrap-all {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 5%;
+    @include media-breakpoint-up(md) {
+      top: 20%;
+    }
+  }
+  //booking banner
+  .booking-banner-background {
+    //position: absolute;
+    //width: 100%;
+    //z-index: 2;
+    //top: 20%;
+  }
+  
+  .booking-banner-content {
+    //position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .booking-banner-card {
+    background-color: $white;
+    box-shadow: 0 4px 8px rgba(246, 132, 77, 0.2);
+    margin-bottom: 1rem;
+    border: none;
+    max-height: auto;
+    @include media-breakpoint-up(lg) {
+      max-height: 481px;
+    }
+  }
+  .booking-banner-radius {
+    border-radius: 1.5rem;
+  }
+  
+  .booking-banner-radius-thumb {
+    border-radius: 1rem;
+  }
+  
+  //
+  
+  //thumb img border orange when active
+  //from swiper https://swiperjs.com/swiper-api#param-slideThumbActiveClass
+  
+  .swiper-slide-thumb-active .booking-banner-radius-thumb {
+    border: 2px solid $primary;
+    border-radius: 1rem;
+  }
+  
+  .booking-banner-lead {
+    margin-top: auto;
+    padding-top: 20px;
+    span {
+      font-size: 0.875rem;
+    }
+  }
+  .booking-banner-btn {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    color: $white;
+    width: 100%;
+    font-size: 0.875rem;
+  }
+  
+  //booking service
+  .booking-service-content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    z-index: 2;
+  }
+  
+  .booking-service-card {
+    background-color: $white;
+    box-shadow: 0 4px 8px rgba(246, 132, 77, 0.2);
+    margin-bottom: 1rem;
+    border: none;
+  }
+  
+  .booking-time-content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .booking-review-content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .booking-review-card {
+    background-color: $white;
+    box-shadow: 0 4px 8px rgba(246, 132, 77, 0.2);
+    margin-bottom: 1rem;
+    border: none;
+  }
+  
+  //swiper
+  // Swiper container styling
+  .swiper {
+    width: 100%;
+    height: 481px; // Set the height for the Swiper container
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  // Swiper slide styling
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; // Override to transparent background
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 481px; // Set height for the slide images
+    object-fit: cover; // Ensure the image covers the area proportionally
+  }
+  
+  // Custom Swiper 2 and Swiper styling
+  .mySwiper2 {
+    height: 481px; // Set height for main Swiper
+    width: 100%;
+  }
+  
+  .mySwiper {
+    height: 100px; // Height for thumbnail Swiper
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  
+  // Thumbnail Swiper styling
+  .mySwiper .swiper-slide img {
+    height: 80px; // Adjust the height of the thumbnail images
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .mySwiper .swiper-slide {
+    width: 25%; // Each thumbnail takes up 25% width
+    opacity: 0.9;
+  }
+  
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1; // Full opacity for active thumbnail
+  }
+  
+  // Swiper navigation buttons (circular buttons)
+  .custom-swiper-next,
+  .custom-swiper-prev {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.2); // Semi-transparent black background
+    border-radius: 50%; // Circular button shape
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; // White arrow color
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add shadow for better visibility
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  
+    i {
+      font-size: 1.25rem;
+    }
+  }
+  
+  // Positioning the navigation buttons
+  .custom-swiper-next {
+    right: 10px; // Position the next button to the right
+  }
+  
+  .custom-swiper-prev {
+    left: 10px; // Position the previous button to the left
+  }
+  
+  //model
+  .booking-model-title {
+    right: 40%;
+  }
+  
+  .booking-form-select {
+    background-color: f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  //btn
+  .booking-primary-btn {
+    border-radius: 0.5rem;
+    background-color: $primary;
+  
+    color: $white !important;
+    &:hover {
+      background-color: $primary-100;
+      border-color: $primary-100;
+      color: $white !important;
+    }
+    &:active {
+      background-color: $primary-200;
+      border-color: $primary-200;
+      color: $white !important;
+    }
+  }
+  
+  .booking-outlined-primary-btn {
+    border-radius: 0.5rem;
+    border: 2px solid $primary;
+    background-color: transparent;
+  
+    color: $primary;
+    &:hover {
+      background-color: $primary-400;
+      border-color: $primary;
+      color: $primary !important;
+    }
+  
+    &:active {
+      background-color: $primary-400;
+      border-color: $primary;
+      color: $primary !important;
+    }
+  }

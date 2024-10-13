@@ -2,7 +2,9 @@
 
 //  保母服務 / Joy
 
-
+body{
+  overflow-x: hidden;
+}
 
 .index-service {
 &-content {
@@ -81,6 +83,19 @@
 //  常見問題 / Joy
 
 .index-qna{
+&-cat-deco{
+  background-image: url("../../assets/images/貓mobile.png");
+  background-repeat: no-repeat;
+  background-position: center bottom ;
+  margin-top: 2.25rem;
+  @include media-breakpoint-up(lg) {
+    background-image: url("../../assets/images/貓web.png");
+    background-repeat: no-repeat;
+    background-position: right 2px bottom 0;
+  }
+
+}
+
 &-content {
   margin-top: 2.5rem;
   padding-bottom: 188px;
@@ -130,31 +145,8 @@
 }
 }
 
-
-
-
-
-
-.cat-body-deco {
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) !important;
-    display: block;
-    width: 219px;
-    height: 154px;
-    z-index: -1;
-    background: url("/assets/images/貓mobile.png");
-    @include media-breakpoint-up(lg) {
-      left: 90%;
-      bottom: 0;
-      width: 354px;
-      height: 231px;
-      background: url("/assets/images/貓web.png");
-    }
-  }
+.accordion-item {
+  background-color: transparent !important;
 }
 
 

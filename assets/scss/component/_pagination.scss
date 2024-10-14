@@ -1,0 +1,46 @@
+.pagination-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @include media-breakpoint-up(md) {
+    gap: 2rem;
+  }
+  &-button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $gray-500;
+    border-radius: 100%;
+    color: $gray-500;
+    transition: $transition-base;
+    &:hover {
+      background-color: $primary;
+      color: $light;
+      border-color: $primary;
+    }
+    &.disabled {
+      color: $gray-700;
+      border-color: $gray-700;
+      pointer-events: none;
+    }
+  }
+  &-item {
+    color: $gray-500;
+    transition: $transition-base;
+    &:hover {
+      color: $gray-300;
+    }
+    &.active {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary;
+      color: $light;
+      border-radius: 100%;
+    }
+  }
+}

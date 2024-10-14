@@ -14,7 +14,7 @@
   <body>
     <div class="page-container">
     <%- include('./layout/header'); -%>
-    <section class="position-relative">
+    <section class="position-relative flex-grow-1">
     
     
       <div class="booking-wrap">
@@ -401,8 +401,8 @@
         aria-labelledby="bookingModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+        <div class="modal-dialog modal-dialog-centered booking-modal-dialog">
+          <div class="modal-content px3 py-6">
             <div
               class="modal-header border-0 justify-content-center d-flex position-relative"
             >
@@ -412,16 +412,17 @@
               >
                 預約資訊
               </h3>
+              <!--
               <button
                 type="button"
                 class="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              ></button>
+              ></button>-->
             </div>
             <div class="modal-body">
               <div>
-                <label for="bookingDateSelect" class="form-label"
+                <label for="bookingDateSelect" class="form-label text-gray-500"
                   >選擇日期</label
                 >
                 <select
@@ -440,7 +441,7 @@
                 </select>
               </div>
               <div>
-                <label for="bookingDateSelect" class="form-label"
+                <label for="bookingDateSelect" class="form-label text-gray-500"
                   >選擇時段</label
                 >
                 <select
@@ -459,7 +460,7 @@
                 </select>
               </div>
               <div>
-                <label for="bookingDateSelect" class="form-label"
+                <label for="bookingDateSelect" class="form-label text-gray-500"
                   >選擇服務</label
                 >
                 <select

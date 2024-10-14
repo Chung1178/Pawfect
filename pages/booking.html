@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="/assets/scss/all.scss" />
   </head>
   <body>
-    <div class="page-container">
     <%- include('./layout/header'); -%>
-    <section class="position-relative flex-grow-1">
-    
-    
+
+    <section class="position-relative">
       <div class="booking-wrap">
         <div class="booking-wrap-background">
           <div class="container mb-16 px-3 h-100"></div>
@@ -25,9 +23,9 @@
       <!--預約服務頁面-->
       <div class="wrap-all">
         <section class="booking-banner-background">
-          <div class="container booking-banner-content mb-16 px-3 h-100">
+          <div class="container booking-banner-content px-3 h-100">
             <div class="row justify-content-center d-flex align-items-stretch">
-              <div class="col-md-8 d-flex mb-8">
+              <div class="col-md-8 d-flex">
                 <div class="card flex-grow-1 border-0 bg-transparent">
                   <!-- Swiper -->
                   <div
@@ -35,7 +33,7 @@
                       --swiper-navigation-color: #fff;
                       --swiper-pagination-color: #fff;
                     "
-                    class="swiper mySwiper2 mb-4"
+                    class="swiper mySwiper2 mb-1"
                   >
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -112,35 +110,39 @@
                 <div
                   class="card flex-grow-1 booking-banner-card booking-banner-radius"
                 >
-                  <div class="card-body d-flex flex-column">
+                  <div class="card-body d-flex flex-column p-6">
                     <div class="d-flex align-items-center mb-2">
                       <img
                         src="/assets/images/i_profile.png"
                         alt="會員照片"
                         class="me-2"
                       />
-                      <h3 class="card-title m-0 fs-3 fw-bold">莉莎的家</h3>
+                      <h3
+                        class="card-title m-0 fs-lg-3 fs-6 fw-bold text-gray-200"
+                      >
+                        莉莎的家
+                      </h3>
                     </div>
-                    <div class="d-flex gap-4 mb-2">
+                    <div class="d-flex gap-4 mb-2 fs-10">
                       <div>
                         <i class="bi bi-star-fill text-primary"></i>
                         <span class="fw-bold text-primary">4.6</span>
                       </div>
                       <div>
                         <i class="bi bi-geo-alt-fill text-gray-500"></i>
-                        <span>中山區,台北市 (5.3km)</span>
+                        <span class="text-gray-500">中山區,台北市 (5.3km)</span>
                       </div>
                       <div>
                         <i class="bi bi-person-fill text-gray-500"></i>
-                        <span>12</span>
+                        <span class="text-gray-500">12</span>
                       </div>
                     </div>
-    
+
                     <p class="card-text mb-2">
                       大家好，莉莎的家是有六年經驗的專業寵物保母。我從小就熱愛動物，並照顧過超過50隻狗狗和貓咪。參加過多次寵物急救訓練，熟悉動物行為學，能應對各種突發情況。我相信每一隻寵物都有獨特需求，所以我會盡心提供最適合牠們的照顧，讓它們感到安心。
                     </p>
                     <div class="booking-banner-lead">
-                      <span class="d-block mb-2 text-center"
+                      <span class="d-block mb-2 text-center text-gray-500 fs-10"
                         >在過去的48小時內，已經收到了十筆預約。</span
                       >
                       <span class="d-block">
@@ -159,12 +161,14 @@
             </div>
           </div>
         </section>
-    
+
         <!--預約服務列表-->
-        <section class="container booking-service-content mb-16 px-3">
+        <section class="container booking-service-content px-3">
           <div class="row justify-content-center d-flex align-items-stretch">
             <div class="col-md-8">
-              <h3 class="fs-4 mb-4">我能為您的寶貝做什麼?</h3>
+              <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">
+                我能為您的寶貝做什麼?
+              </h3>
               <div class="card booking-service-card">
                 <div
                   class="card-body d-flex align-items-center justify-content-between"
@@ -179,7 +183,7 @@
                   </div>
                   <span
                     ><strong class="fw-bold fs-7">NT $550</strong>
-                    <span class="fs-11">每次</span>
+                    <span class="fs-11 text-gray-500">每次</span>
                   </span>
                 </div>
               </div>
@@ -197,11 +201,11 @@
                   </div>
                   <span
                     ><strong class="fw-bold fs-7">NT $300</strong>
-                    <span class="fs-11">每次</span>
+                    <span class="fs-11 text-gray-500">每次</span>
                   </span>
                 </div>
               </div>
-    
+
               <div class="card booking-service-card">
                 <div
                   class="card-body d-flex align-items-center justify-content-between"
@@ -216,21 +220,21 @@
                   </div>
                   <span
                     ><strong class="fw-bold fs-7">NT $1000</strong>
-                    <span class="fs-11">每次</span>
+                    <span class="fs-11 text-gray-500">每次</span>
                   </span>
                 </div>
               </div>
             </div>
-    
+
             <div class="col-md-4 d-flex"></div>
           </div>
         </section>
-    
+
         <!--預約時間-->
-        <section class="container booking-time-content mb-16 px-3">
+        <section class="container booking-time-content px-3">
           <div class="row justify-content-center d-flex">
             <div class="col-md-8">
-              <h3 class="fs-4 mb-4">可服務時間</h3>
+              <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">可服務時間</h3>
               <ul class="d-flex list-unstyled gap-4 fs-8">
                 <li>週日</li>
                 <li>週一</li>
@@ -241,32 +245,36 @@
                 <li>週六</li>
               </ul>
             </div>
-    
+
             <div class="col-md-4 d-flex"></div>
           </div>
         </section>
-    
+
         <!--預約評論-->
-        <section class="container booking-review-content mb-16 px-3">
+        <section class="container booking-review-content px-3">
           <div class="row justify-content-center d-flex">
             <div class="col-md-8">
-              <h3 class="fs-4 mb-4">毛爸媽的心聲</h3>
-    
+              <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">毛爸媽的心聲</h3>
+
               <!--卡片1-->
               <div class="card booking-review-card">
                 <div class="card-body">
                   <div
                     class="d-flex justify-content-between align-items-center mb-4"
                   >
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
                       <img
                         src="/assets/images/i_劉曉華.svg"
                         alt="劉曉華profile"
                         class="me-3"
                       />
                       <div>
-                        <span class="d-block fw-bold fs-8">劉曉華</span>
-                        <span class="d-block fs-9">遛狗散步·2024年6月22日</span>
+                        <span class="d-block fw-bold fs-8 text-gray-200"
+                          >劉曉華</span
+                        >
+                        <span class="d-block fs-10 text-gray-500"
+                          >遛狗散步·2024年6月22日</span
+                        >
                       </div>
                     </div>
                     <div class="text-primary">
@@ -277,28 +285,32 @@
                       <i class="bi bi-star-fill"></i>
                     </div>
                   </div>
-    
-                  <span>
+
+                  <span class="text-gray-300">
                     雅雯對我的小狗旺旺非常有愛心，每天都會帶牠去散步和玩耍，旺旺回來後總是很開心。
                   </span>
                 </div>
               </div>
-    
+
               <!--卡片2-->
               <div class="card booking-review-card">
                 <div class="card-body">
                   <div
                     class="d-flex justify-content-between align-items-center mb-4"
                   >
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
                       <img
                         src="/assets/images/i_張怡君.svg"
                         alt="張怡君profile"
                         class="me-3"
                       />
                       <div>
-                        <span class="d-block fw-bold fs-8">張怡君</span>
-                        <span class="d-block fs-9">上門餵食·2024年5月12日</span>
+                        <span class="d-block fw-bold fs-8 text-gray-200"
+                          >張怡君</span
+                        >
+                        <span class="d-block fs-10 text-gray-500"
+                          >上門餵食·2024年5月12日</span
+                        >
                       </div>
                     </div>
                     <div class="text-primary">
@@ -309,28 +321,32 @@
                       <i class="bi bi-star"></i>
                     </div>
                   </div>
-    
-                  <span>
+
+                  <span class="text-gray-300">
                     我的貓咪米米在雅雯的照顧下變得很放鬆，她知道如何讓米米感到安全和受到愛護。
                   </span>
                 </div>
               </div>
-    
+
               <!--卡片3-->
               <div class="card booking-review-card">
                 <div class="card-body">
                   <div
                     class="d-flex justify-content-between align-items-center mb-4"
                   >
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
                       <img
                         src="/assets/images/i_陳建忠.svg"
                         alt="陳建忠profile"
                         class="me-3"
                       />
                       <div>
-                        <span class="d-block fw-bold fs-8">陳建忠</span>
-                        <span class="d-block fs-9">上門餵食·2024年4月27日</span>
+                        <span class="d-block fw-bold fs-8 text-gray-200"
+                          >陳建忠</span
+                        >
+                        <span class="d-block fs-10 text-gray-500"
+                          >上門餵食·2024年4月27日</span
+                        >
                       </div>
                     </div>
                     <div class="text-primary">
@@ -341,28 +357,32 @@
                       <i class="bi bi-star-fill"></i>
                     </div>
                   </div>
-    
-                  <span>
+
+                  <span class="text-gray-300">
                     因為出國一週所以沒辦法照顧家裡的毛小孩，還好有雅雯的上門餵食服務，不得不說雅雯真的很貼心，通常我家那隻在陌生人面前是不太敢吃東西的，但因為雅雯的溫柔安撫，結果竟然吃得比平常還多！
                   </span>
                 </div>
               </div>
-    
+
               <!--卡片4-->
               <div class="card booking-review-card">
                 <div class="card-body">
                   <div
                     class="d-flex justify-content-between align-items-center mb-4"
                   >
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
                       <img
                         src="/assets/images/i_黃美玲.svg"
                         alt="黃美玲profile"
                         class="me-3"
                       />
                       <div>
-                        <span class="d-block fw-bold fs-8">黃美玲</span>
-                        <span class="d-block fs-9">日間托養·2024年2月16日</span>
+                        <span class="d-block fw-bold fs-8 text-gray-200"
+                          >黃美玲</span
+                        >
+                        <span class="d-block fs-10 text-gray-500"
+                          >日間托養·2024年2月16日</span
+                        >
                       </div>
                     </div>
                     <div class="text-primary">
@@ -373,14 +393,14 @@
                       <i class="bi bi-star-fill"></i>
                     </div>
                   </div>
-    
-                  <span>
+
+                  <span class="text-gray-300">
                     前陣子經常加班很晚回家，擔心家裡的毛小孩沒人照顧所以上網尋找日間托養的服務，很幸運遇到雅雯，讓我白天能放心的將毛小孩交給他照顧。
                   </span>
                 </div>
               </div>
-    
-              <div class="card border-0">
+
+              <div class="card border-0 bg-transparent">
                 <div class="card-body">
                   <div class="mb-4 text-center fw-bold text-primary">
                     <span>看更多卡片</span>
@@ -388,10 +408,11 @@
                 </div>
               </div>
             </div>
-    
+
             <div class="col-md-4 d-flex"></div>
           </div>
         </section>
+        <%- include('./layout/footer'); -%>
       </div>
       <!--預約服務頁面點擊 Modal -->
       <div
@@ -402,7 +423,7 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered booking-modal-dialog">
-          <div class="modal-content px3 py-6">
+          <div class="modal-content px-3 pt-6 pb-8">
             <div
               class="modal-header border-0 justify-content-center d-flex position-relative"
             >
@@ -421,31 +442,51 @@
               ></button>-->
             </div>
             <div class="modal-body">
+              <!---new date picker-->
+
               <div>
-                <label for="bookingDateSelect" class="form-label text-gray-500"
+                <label for="date-picker-phone" class="form-label text-gray-500"
                   >選擇日期</label
                 >
-                <select
-                  class="form-select booking-form-select"
-                  aria-label="Default select example"
-                  id="bookingDateSelect"
-                >
-                  <option selected>日期</option>
-                  <option value="1">10/01/2024</option>
-                  <option value="2">10/02/2024</option>
-                  <option value="3">10/03/2024</option>
-                  <option value="3">10/04/2024</option>
-                  <option value="3">10/05/2024</option>
-                  <option value="3">10/06/2024</option>
-                  <option value="3">10/07/2024</option>
-                </select>
+                <div class="position-relative">
+                  <input
+                    type="text"
+                    id="date-picker-phone"
+                    class="form-control booking-custom-form-control w-100"
+                    readonly
+                    placeholder="日期"
+                  />
+                  <!-- 使用 Bootstrap 的箭頭 -->
+                  <span
+                    class="position-absolute top-50 end-0 translate-middle-y pe-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#9e9e9e"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2 5l6 6 6-6"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
+
+              <!---->
+
               <div>
                 <label for="bookingDateSelect" class="form-label text-gray-500"
                   >選擇時段</label
                 >
                 <select
-                  class="form-select booking-form-select"
+                  class="form-select booking-custom-form-select"
                   aria-label="Default select example"
                   id="bookingDateSelect"
                 >
@@ -459,12 +500,12 @@
                   <option value="3">週日</option>
                 </select>
               </div>
-              <div>
+              <div class="booking-divider">
                 <label for="bookingDateSelect" class="form-label text-gray-500"
                   >選擇服務</label
                 >
                 <select
-                  class="form-select booking-form-select"
+                  class="form-select booking-custom-form-control"
                   aria-label="Default select example"
                   id="bookingDateSelect"
                 >
@@ -475,7 +516,10 @@
                 </select>
               </div>
             </div>
-            <div class="modal-footer border-0 d-flex justify-content-center">
+
+            <div
+              class="modal-footer border-0 d-flex justify-content-center pt-0"
+            >
               <button
                 type="button"
                 class="btn fw-bold booking-outlined-primary-btn py-2 px-6"
@@ -493,15 +537,8 @@
           </div>
         </div>
       </div>
-    
-    
-    
     </section>
-
-    <%- include('./layout/footer'); -%>
-</div>
 
     <script type="module" src="../main.js"></script>
   </body>
 </html>
-

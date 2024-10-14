@@ -6,9 +6,27 @@ swiperScript.onload = () => {
   // Swiper 縮圖
   const swiperThumbs = new Swiper(".mySwiper", {
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true,
+
+    breakpoints: {
+      // Tablet and above
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      // Desktop and above
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 10,
+      },
+      // Large desktop and above
+      1440: {
+        slidesPerView: 8,
+        spaceBetween: 10,
+      },
+    },
   });
 
   // Swiper 初始化代碼，確保 Swiper 加載後執行
@@ -24,3 +42,28 @@ swiperScript.onload = () => {
   });
 };
 document.body.appendChild(swiperScript);
+
+// 日期 input 選擇
+import AirDatepicker from "air-datepicker";
+import localeZH from "air-datepicker/locale/zh";
+import "air-datepicker/air-datepicker.css";
+const dataShowElems = document.querySelectorAll("[data-date-show]");
+
+const basicSettings = {
+  locale: localeZH,
+  range: true,
+  minDate: new Date(),
+  onSelect({ date, formattedDate }) {
+    selectSitterObj.dateRange = formattedDate;
+    dataShowElems.forEach((item) => (item.innerHTML = ""));
+  },
+};
+
+const dataPickerPhone = new AirDatepicker("#date-picker-phone", {
+  isMobile: true,
+  ...basicSettings,
+});
+
+const dataPickerDesk = new AirDatepicker("#date-picker-desk", {
+  ...basicSettings,
+});

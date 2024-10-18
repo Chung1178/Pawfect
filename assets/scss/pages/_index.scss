@@ -1,5 +1,47 @@
 //  banner / Chung
+.index-banner-bg {
+  background-image: url("../images/保母sm.png"), url("../images/index-banner-貓sm.png");
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0, left 13.8% top 0;
+  @include media-breakpoint-up(lg) {
+    background-image: url("../images/保母.png"), url("../images/index-banner-貓.png");
+    background-position: right 15% bottom 0, left 43% top 0;
+  }
+}
 
+.index-banner {
+  height: 288px;
+  @include media-breakpoint-up(lg) {
+    height: 478px;
+  }
+  .dropdown-menu {
+    top: 8px !important;
+  }
+
+  .type-select-btn{
+    color: $gray-300;
+    border-bottom: 3px solid transparent;
+    &:hover,
+    &.active {
+      color: $primary;
+    }
+    &.active {
+      border-bottom: 3px solid $primary;
+    }
+  }
+  .city-select-container {
+    height: 150px;
+    overflow-y: scroll;
+  }
+  #date-picker-desk,
+  #date-picker-phone {
+    cursor: pointer;
+  }
+  #date-picker-desk:focus,
+  #date-picker-phone:focus {
+    outline: none;
+  }
+}
 //  保母服務 / Joy
 
 body {

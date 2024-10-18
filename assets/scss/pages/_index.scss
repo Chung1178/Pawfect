@@ -16,170 +16,146 @@
 
 //  預定體驗 / Grace
 .order-process {
-  background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%)
+    background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
   }
-
-h2 {
+  
+  .pawfect-title {
     text-align: center;
+    font-size: 2.5rem;
     color: $primary;
-    margin-bottom: 2rem; /* 32px */
-}
-
-.container {
-    margin: 0 auto;
-    padding-bottom: 20rem; /* 320px */
-}
-
-.pawfect-title {
-    text-align: center;
-    font-size: 2.5rem; /* 40px */
-    color: $primary;
-    margin-bottom: 0.5rem; /* 8px */
-    white-space: nowrap; /* 避免斷行 */
-}
-
-.pawfect-subtitle {
-    text-align: center;
-    font-size: 1.25rem; /* 20px */
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+  }
+  
+  .pawfect-subtitle {
+    font-size: 1.25rem;
     color: $gray-300;
-    margin-bottom: 5rem; /* 80px */
-}
-
-.card-order {
-    margin-bottom: 0.0625rem; /* 1px */
-    font-weight: bold;
-    text-align: center;
-    font-size: 5rem; /* 80px */
-}
-
-.card-icon {
+    margin-bottom: 3rem;
+    text-align: center; // 副標題置中
+  }
+  
+  /* 確保卡片等高 */
+  .order-process .row {
+    display: flex; /* 將 row 設為 flex 排版 */
+    flex-wrap: wrap; /* 允許卡片換行 */
+    justify-content: center; /* 水平置中 */
+    align-items: stretch; /* 讓卡片等高 */
+  }
+  
+  /* 確保圖標在卡片之間置中 */
+  .col-md-auto {
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.card-icon img {
-    width: 160px; /* 固定寬度 */
-    height: 120px; /* 固定高度 */
-    object-fit: contain;
-    margin-bottom: 1.5rem; /* 24px */
-}
-
-.container .card {
-    text-align: center;
-    padding: 1.25rem; /* 20px */
-    border: none; 
-    border-radius: 1.5rem; /* 24px */
-    background-color: $light;
-    box-shadow: 0px 4px 80px 0px rgba(246, 132, 77, 0.2);
-    transition: transform 0.3s; 
-}
-
-.card:hover {
-    transform: scale(1.05); 
-}
-
-.card-body {
-    padding: 1.25rem; /* 20px */
-}
-
-.card-title {
-    font-size: 1.5rem; /* 24px */
-    color: $gray-200;
+    align-items: center; /* 垂直置中 */
+  }
+  
+  .card-order {
     font-weight: bold;
-    text-align: center;
-}
-
-.card-text {
-    font-size: 1.25rem; /* 20px */
-    color: $gray-300;
-    line-height: 1.875rem; /* 30px */
-}
-
-.card.h-100 {
-    height: 100%; 
-}
-
-.decorative-icon-1, .decorative-icon-2 {
-    width: 75px; /* 固定寬度 */
-    height: 109px; /* 固定高度 */
-    margin: 230px 16.5px;
-    display: block;
-}
-
-.decorative-icon-1 {
-    transition: transform 0.3s; /* 為圖標添加過渡效果 */
-}
-
-.decorative-icon-2 {
+    font-size: 4rem;
+  }
+  
+  .card-icon {
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .card-icon img {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  /* 卡片樣式：確保所有卡片等高 */
+  .card {
+    display: flex; /* 新增：使用 flex 排版 */
+    flex-direction: column; /* 新增：垂直排列內容 */
+    justify-content: space-between; /* 新增：內容在卡片內平均分布 */
+    padding: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .decorative-icon-1 {
+    transition: transform 0.3s;
+  }
+  
+  .decorative-icon-1:hover {
+    transform: rotate(120deg);
+  }
+  
+  .decorative-icon-2 {
     transform: rotate(120deg);
     transition: transform 0.3s; /* 為圖標添加過渡效果 */
-}
-
-.decorative-icon-1:hover {
-    transform: rotate(120deg); 
-}
-
-.decorative-icon-2:hover {
+  }
+  
+  .decorative-icon-2:hover {
     transform: rotate(15deg);
-}
-
-/* 響應式設計 */
-@media (max-width: 768px) {
-    .container {
-        padding-bottom: 10rem; /* 160px */
+  }
+  
+  /* 使用 Bootstrap 的斷點系統設置 RWD */
+  .row {
+    display: flex;
+    //flex-wrap: wrap; /* 使卡片能換行 */
+  }
+  
+  /* 大於992px 時，卡片顯示為三欄式 */
+  @media (min-width: 992px) {
+    .col-lg-4, .col-md-4, .col-sm-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin: 10px;
     }
-
+  }
+  
+  /* 小於992px，大於768px 時，卡片顯示為單欄式 */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .col-lg-4, .col-md-4, .col-sm-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        margin: 10px;
+    }
+  }
+  
+  /* 小於768px 時，卡片顯示為單欄式 */
+  @media (max-width: 767px) {
+    .col-md-4 {
+      flex: 0 0 calc(100% - 48px);
+      max-width: calc(100% - 48px);
+      margin: 5px 24px;
+    }
+  }
+  
+  .index-order-container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* 調整標題和副標題在小螢幕上的樣式 */
+  @media (max-width: 576px) {
     .pawfect-title {
-        font-size: 2rem; /* 32px */
+      font-size: 2rem;
     }
-
+  
     .pawfect-subtitle {
-        font-size: 1rem; /* 16px */
-        margin-bottom: 3rem; /* 48px */
+      font-size: 1rem;
     }
-
+  
     .card-order {
-        font-size: 3rem; /* 48px */
+      font-size: 3rem;
     }
+  
+    .decorative-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
 
-    .card-title {
-        font-size: 1.25rem; /* 20px */
-    }
-
-    .card-text {
-        font-size: 1rem; /* 16px */
-    }
-
-    .decorative-icon-1, .decorative-icon-2 {
-        margin: 10rem 1rem; /* 160px 16.5px */
-    }
-}
-
-@media (min-width: 769px) {
-    .pawfect-title {
-        font-size: 2.5rem; /* 40px */
-    }
-
-    .pawfect-subtitle {
-        font-size: 1.25rem; /* 20px */
-    }
-
-    .card-order {
-        font-size: 5rem; /* 80px */
-    }
-
-    .card-title {
-        font-size: 1.5rem; /* 24px */
-    }
-
-    .card-text {
-        font-size: 1.25rem; /* 20px */
-    }
-
-    .decorative-icon-1, .decorative-icon-2 {
-        margin: 230px 16.5px;
-    }
-} 
 //  常見問題 / Joy
+

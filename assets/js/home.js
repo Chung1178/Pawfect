@@ -180,4 +180,3 @@ const dataPickerPhone = new AirDatepicker('#date-picker-phone', {
 const dataPickerDesk = new AirDatepicker('#date-picker-desk', {
   ...basicSettings,
 })
-

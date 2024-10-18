@@ -1,4 +1,6 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header-nav-bg-color {
+  background-color: $primary-400;
+  @include media-breakpoint-up(lg) { 
+    background:#fff;
+  }
 }

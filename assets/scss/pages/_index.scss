@@ -128,8 +128,69 @@ body {
 
 //  預定體驗 / Grace
 .order-process {
-    background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
+  background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
+
+  /* 設定 RWD 格線系統 */
+  .row {
+    display: flex;
+    /* 確保卡片能換行 */
+    flex-wrap: wrap;
   }
+
+  /* 大於992px 時，卡片顯示為三欄式 */
+  @media (min-width: 992px) {
+    .col-lg-4, .col-md-4, .col-sm-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin: 10px;
+    }
+  }
+
+  /* 小於992px，大於768px 時，卡片顯示為單欄式 */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .col-lg-4, .col-md-4, .col-sm-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin: 10px;
+    }
+  }
+
+  /* 小於768px 時，卡片顯示為單欄式 */
+  @media (max-width: 767px) {
+    .col-md-4 {
+      flex: 0 0 calc(100% - 48px);
+      max-width: calc(100% - 48px);
+      margin: 5px 24px;
+    }
+  }
+
+  .index-order-container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* 調整小螢幕樣式 */
+  @media (max-width: 576px) {
+    .pawfect-title {
+      font-size: 2rem;
+    }
+
+    .pawfect-subtitle {
+      font-size: 1rem;
+    }
+
+    .card-order {
+      font-size: 3rem;
+    }
+
+    .decorative-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
   
   .pawfect-title {
     text-align: center;
@@ -207,65 +268,6 @@ body {
   
   .decorative-icon-2:hover {
     transform: rotate(15deg);
-  }
-  
-  /* 使用 Bootstrap 的斷點系統設置 RWD */
-  .row {
-    display: flex;
-    //flex-wrap: wrap; /* 使卡片能換行 */
-  }
-  
-  /* 大於992px 時，卡片顯示為三欄式 */
-  @media (min-width: 992px) {
-    .col-lg-4, .col-md-4, .col-sm-4 {
-      flex: 0 0 33.3333%;
-      max-width: 33.3333%;
-      margin: 10px;
-    }
-  }
-  
-  /* 小於992px，大於768px 時，卡片顯示為單欄式 */
-  @media (max-width: 991px) and (min-width: 768px) {
-    .col-lg-4, .col-md-4, .col-sm-4 {
-        flex: 0 0 33.3333%;
-        max-width: 33.3333%;
-        margin: 10px;
-    }
-  }
-  
-  /* 小於768px 時，卡片顯示為單欄式 */
-  @media (max-width: 767px) {
-    .col-md-4 {
-      flex: 0 0 calc(100% - 48px);
-      max-width: calc(100% - 48px);
-      margin: 5px 24px;
-    }
-  }
-  
-  .index-order-container {
-    max-width: 1296px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-  
-  /* 調整標題和副標題在小螢幕上的樣式 */
-  @media (max-width: 576px) {
-    .pawfect-title {
-      font-size: 2rem;
-    }
-  
-    .pawfect-subtitle {
-      font-size: 1rem;
-    }
-  
-    .card-order {
-      font-size: 3rem;
-    }
-  
-    .decorative-icon {
-      width: 40px;
-      height: 40px;
-    }
   }
   
 

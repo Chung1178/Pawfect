@@ -5,7 +5,7 @@ swiperScript.src =
 swiperScript.onload = () => {
   // Swiper 縮圖
   const swiperThumbs = new Swiper(".mySwiper", {
-    spaceBetween: 10,
+    spaceBetween: 16,
     slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true,
@@ -14,24 +14,24 @@ swiperScript.onload = () => {
       // Tablet and above
       768: {
         slidesPerView: 4,
-        spaceBetween: 10,
+        spaceBetween: 16,
       },
       // Desktop and above
       1024: {
         slidesPerView: 6,
-        spaceBetween: 10,
+        spaceBetween: 16,
       },
       // Large desktop and above
       1440: {
         slidesPerView: 8,
-        spaceBetween: 10,
+        spaceBetween: 16,
       },
     },
   });
 
   // Swiper 初始化代碼，確保 Swiper 加載後執行
   const swiper = new Swiper(".mySwiper2", {
-    spaceBetween: 10,
+    spaceBetween: 16,
     navigation: {
       nextEl: ".custom-swiper-next", //".swiper-button-next",
       prevEl: ".custom-swiper-prev", //".swiper-button-prev",

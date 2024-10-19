@@ -15,540 +15,586 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <section class="position-relative">
-      <div class="booking-wrap">
-        <div class="booking-wrap-background">
-          <div class="container mb-16 px-3 h-100"></div>
-        </div>
-      </div>
-
-      <!-- Booking Service Page -->
-      <div class="booking-wrap-all">
-        <!-- Booking Banner Section -->
-        <section class="booking-banner-background">
-          <div class="container booking-banner-content px-3 h-100">
-            <div class="row justify-content-center d-flex align-items-stretch">
-              <!-- Swiper Images -->
-              <div class="col-md-8 d-flex">
-                <div class="card flex-grow-1 border-0 bg-transparent">
-                  <!-- Main Swiper -->
+    <main>
+      <section class="booking-bg-gradient-primary">
+        <div class="booking-banner">
+          <div
+            class="container position-relative booking-banner-container-padding"
+          >
+            <div class="position-absolute px-3 booking-banner-padding">
+              <div class="row justify-content-center d-flex">
+                <!-- Swiper Images -->
+                <div class="col-md-8 d-flex flex-column mt-mobile-32">
+                  <!--swiper-->
                   <div
-                    class="swiper mySwiper2 mb-1"
-                    style="
-                      --swiper-navigation-color: #fff;
-                      --swiper-pagination-color: #fff;
-                    "
+                    class="card flex-grow-1 border-0 bg-transparent mb-8 mb-md-16"
                   >
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎1.png"
-                          alt="莉莎1"
-                          class="booking-banner-radius"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎2.png"
-                          alt="莉莎2"
-                          class="booking-banner-radius"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎3.png"
-                          alt="莉莎3"
-                          class="booking-banner-radius"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎4.png"
-                          alt="莉莎4"
-                          class="booking-banner-radius"
-                        />
-                      </div>
-                    </div>
-
-                    <!-- Custom Swiper Navigation -->
-                    <div class="custom-swiper-next">
-                      <i class="bi bi-arrow-right"></i>
-                    </div>
-                    <div class="custom-swiper-prev">
-                      <i class="bi bi-arrow-left"></i>
-                    </div>
-                  </div>
-
-                  <!-- Thumbnail Swiper -->
-                  <div thumbsSlider="" class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎1.png"
-                          alt="莉莎1縮圖"
-                          class="booking-banner-radius-thumb"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎2.png"
-                          alt="莉莎2縮圖"
-                          class="booking-banner-radius-thumb"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎3.png"
-                          alt="莉莎3縮圖"
-                          class="booking-banner-radius-thumb"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/booking-page/莉莎4.png"
-                          alt="莉莎4縮圖"
-                          class="booking-banner-radius-thumb"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Booking Banner Info -->
-              <div class="col-md-4 d-flex">
-                <div
-                  class="card flex-grow-1 booking-banner-card booking-banner-radius"
-                >
-                  <div class="card-body d-flex flex-column p-6">
-                    <!-- Profile Info -->
-                    <div class="d-flex align-items-center mb-2">
-                      <img
-                        src="/assets/images/booking-page/i_profile.png"
-                        alt="會員照片"
-                        class="me-2"
-                      />
-                      <h3
-                        class="card-title m-0 fs-lg-3 fs-6 fw-bold text-gray-200"
-                      >
-                        莉莎的家
-                      </h3>
-                    </div>
-
-                    <!-- Ratings and Location -->
-                    <div class="d-flex gap-4 mb-2 fs-10">
-                      <div>
-                        <i class="bi bi-star-fill text-primary"></i>
-                        <span class="fw-bold text-primary">4.6</span>
-                      </div>
-                      <div>
-                        <i class="bi bi-geo-alt-fill text-gray-500"></i>
-                        <span class="text-gray-500">中山區,台北市 (5.3km)</span>
-                      </div>
-                      <div>
-                        <i class="bi bi-person-fill text-gray-500"></i>
-                        <span class="text-gray-500">12</span>
-                      </div>
-                    </div>
-
-                    <!-- Introduction -->
-                    <p class="card-text mb-2">
-                      大家好，莉莎的家是有六年經驗的專業寵物保母。我從小就熱愛動物，並照顧過超過50隻狗狗和貓咪。參加過多次寵物急救訓練，熟悉動物行為學，能應對各種突發情況。我相信每一隻寵物都有獨特需求，所以我會盡心提供最適合牠們的照顧，讓它們感到安心。
-                    </p>
-
-                    <!-- Booking Call to Action -->
-                    <div class="booking-banner-lead">
-                      <span
-                        class="d-block mb-2 text-center text-gray-500 fs-10"
-                      >
-                        在過去的48小時內，已經收到了十筆預約。
-                      </span>
-                      <a
-                        href="#"
-                        class="btn booking-banner-btn booking-primary-btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal"
-                        >立即預約</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Booking Services -->
-        <section class="container booking-service-content px-3">
-          <div class="row justify-content-center d-flex align-items-stretch">
-            <div class="col-md-8">
-              <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">
-                我能為您的寶貝做什麼?
-              </h3>
-
-              <!-- Service Card 1 -->
-              <div class="card booking-service-card">
-                <div
-                  class="card-body d-flex align-items-center justify-content-between"
-                >
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="/assets/images/booking-page/i_遛狗散步.svg"
-                      alt="溜狗散步"
-                      class="me-3"
-                    />
-                    <span class="fw-bold fs-7 text-primary">遛狗散步</span>
-                  </div>
-                  <span>
-                    <strong class="fw-bold fs-7">NT $550</strong>
-                    <span class="fs-11 text-gray-500">每次</span>
-                  </span>
-                </div>
-              </div>
-
-              <!-- Service Card 2 -->
-              <div class="card booking-service-card">
-                <div
-                  class="card-body d-flex align-items-center justify-content-between"
-                >
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="/assets/images/booking-page/i_上門餵食.svg"
-                      alt="上門餵食"
-                      class="me-3"
-                    />
-                    <span class="fw-bold fs-7 text-secondary">上門餵食</span>
-                  </div>
-                  <span>
-                    <strong class="fw-bold fs-7">NT $300</strong>
-                    <span class="fs-11 text-gray-500">每次</span>
-                  </span>
-                </div>
-              </div>
-
-              <!-- Service Card 3 -->
-              <div class="card booking-service-card">
-                <div
-                  class="card-body d-flex align-items-center justify-content-between"
-                >
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="/assets/images/booking-page/i_日間托養.svg"
-                      alt="日間托養"
-                      class="me-3"
-                    />
-                    <span class="fw-bold fs-7 text-thirdly">日間托養</span>
-                  </div>
-                  <span>
-                    <strong class="fw-bold fs-7">NT $1000</strong>
-                    <span class="fs-11 text-gray-500">每次</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 d-flex"></div>
-          </div>
-        </section>
-
-        <!-- Booking Time -->
-        <section class="container booking-time-content px-3">
-          <div class="row justify-content-center d-flex">
-            <div class="col-md-8">
-              <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">可服務時間</h3>
-              <ul class="d-flex list-unstyled gap-4 fs-8">
-                <li>週日</li>
-                <li>週一</li>
-                <li>週二</li>
-                <li>週三</li>
-                <li>週四</li>
-                <li>週五</li>
-                <li>週六</li>
-              </ul>
-            </div>
-
-            <div class="col-md-4 d-flex"></div>
-          </div>
-        </section>
-
-        <!-- Booking Reviews -->
-        <section class="container booking-review-content px-3">
-          <div class="row justify-content-center d-flex">
-            <div class="col-md-8">
-              <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">毛爸媽的心聲</h3>
-
-              <!-- Review Card 1 -->
-              <div class="card booking-review-card">
-                <div class="card-body">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-4"
-                  >
-                    <div class="d-flex align-items-center">
-                      <img
-                        src="/assets/images/booking-page/i_劉曉華.svg"
-                        alt="劉曉華profile"
-                        class="me-3"
-                      />
-                      <div>
-                        <span class="d-block fw-bold fs-8 text-gray-200"
-                          >劉曉華</span
-                        >
-                        <span class="d-block fs-10 text-gray-500"
-                          >遛狗散步·2024年6月22日</span
-                        >
-                      </div>
-                    </div>
-                    <div class="text-primary">
-                      <i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <span class="text-gray-300"
-                    >雅雯對我的小狗旺旺非常有愛心，每天都會帶牠去散步和玩耍，旺旺回來後總是很開心。</span
-                  >
-                </div>
-              </div>
-
-              <!-- Review Card 2 -->
-              <div class="card booking-review-card">
-                <div class="card-body">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-4"
-                  >
-                    <div class="d-flex align-items-center">
-                      <img
-                        src="/assets/images/booking-page/i_張怡君.svg"
-                        alt="張怡君profile"
-                        class="me-3"
-                      />
-                      <div>
-                        <span class="d-block fw-bold fs-8 text-gray-200"
-                          >張怡君</span
-                        >
-                        <span class="d-block fs-10 text-gray-500"
-                          >上門餵食·2024年5月12日</span
-                        >
-                      </div>
-                    </div>
-                    <div class="text-primary">
-                      <i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                    </div>
-                  </div>
-                  <span class="text-gray-300"
-                    >我的貓咪米米在雅雯的照顧下變得很放鬆，她知道如何讓米米感到安全和受到愛護。</span
-                  >
-                </div>
-              </div>
-
-              <!-- Review Card 3 -->
-              <div class="card booking-review-card">
-                <div class="card-body">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-4"
-                  >
-                    <div class="d-flex align-items-center">
-                      <img
-                        src="/assets/images/booking-page/i_陳建忠.svg"
-                        alt="陳建忠profile"
-                        class="me-3"
-                      />
-                      <div>
-                        <span class="d-block fw-bold fs-8 text-gray-200"
-                          >陳建忠</span
-                        >
-                        <span class="d-block fs-10 text-gray-500"
-                          >上門餵食·2024年4月27日</span
-                        >
-                      </div>
-                    </div>
-                    <div class="text-primary">
-                      <i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <span class="text-gray-300"
-                    >因為出國一週所以沒辦法照顧家裡的毛小孩，還好有雅雯的上門餵食服務，不得不說雅雯真的很貼心，通常我家那隻在陌生人面前是不太敢吃東西的，但因為雅雯的溫柔安撫，結果竟然吃得比平常還多！</span
-                  >
-                </div>
-              </div>
-
-              <!-- Review Card 4 -->
-              <div class="card booking-review-card">
-                <div class="card-body">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-4"
-                  >
-                    <div class="d-flex align-items-center">
-                      <img
-                        src="/assets/images/booking-page/i_黃美玲.svg"
-                        alt="黃美玲profile"
-                        class="me-3"
-                      />
-                      <div>
-                        <span class="d-block fw-bold fs-8 text-gray-200"
-                          >黃美玲</span
-                        >
-                        <span class="d-block fs-10 text-gray-500"
-                          >日間托養·2024年2月16日</span
-                        >
-                      </div>
-                    </div>
-                    <div class="text-primary">
-                      <i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <span class="text-gray-300"
-                    >前陣子經常加班很晚回家，擔心家裡的毛小孩沒人照顧所以上網尋找日間托養的服務，很幸運遇到雅雯，讓我白天能放心的將毛小孩交給她照顧。</span
-                  >
-                </div>
-              </div>
-
-              <!-- More Reviews -->
-              <div class="card border-0 bg-transparent">
-                <div class="card-body">
-                  <div class="mb-4 text-center fw-bold text-primary">
-                    <span>看更多卡片</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 d-flex"></div>
-          </div>
-        </section>
-        <%- include('./layout/footer'); -%>
-      </div>
-
-      <!-- Booking Modal -->
-      <div
-        class="modal fade"
-        id="bookingModal"
-        tabindex="-1"
-        aria-labelledby="bookingModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered booking-modal-dialog">
-          <div class="modal-content px-3 pt-6 pb-8">
-            <div
-              class="modal-header border-0 justify-content-center d-flex position-relative"
-            >
-              <h3
-                class="modal-title position-absolute booking-model-title"
-                id="bookingModalLabel"
-              >
-                預約資訊
-              </h3>
-            </div>
-
-            <!-- Date Picker -->
-            <div class="modal-body">
-              <div>
-                <label for="date-picker-phone" class="form-label text-gray-500"
-                  >選擇日期</label
-                >
-                <div class="position-relative">
-                  <input
-                    type="text"
-                    id="date-picker-phone"
-                    class="form-control booking-custom-form-control w-100"
-                    readonly
-                    placeholder="日期"
-                  />
-                  <span
-                    class="position-absolute top-50 end-0 translate-middle-y pe-4"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      viewBox="0 0 16 16"
+                    <!-- Main Swiper -->
+                    <div
+                      class="swiper mySwiper2 mb-1"
+                      style="
+                        --swiper-navigation-color: #fff;
+                        --swiper-pagination-color: #fff;
+                      "
                     >
-                      <path
-                        fill="none"
-                        stroke="#9e9e9e"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M2 5l6 6 6-6"
-                      />
-                    </svg>
-                  </span>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎1.jpeg"
+                            alt="莉莎1"
+                            class="booking-banner-radius"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎2.jpeg"
+                            alt="莉莎2"
+                            class="booking-banner-radius"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎3.png"
+                            alt="莉莎3"
+                            class="booking-banner-radius"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎4.jpeg"
+                            alt="莉莎4"
+                            class="booking-banner-radius"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Custom Swiper Navigation -->
+                      <div class="custom-swiper-next">
+                        <i class="bi bi-arrow-right"></i>
+                      </div>
+                      <div class="custom-swiper-prev">
+                        <i class="bi bi-arrow-left"></i>
+                      </div>
+                    </div>
+
+                    <!-- Thumbnail Swiper -->
+                    <div thumbsSlider="" class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎縮圖1.svg"
+                            alt="莉莎1縮圖"
+                            class="booking-banner-radius-thumb"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎縮圖2.svg"
+                            alt="莉莎2縮圖"
+                            class="booking-banner-radius-thumb"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎縮圖3.svg"
+                            alt="莉莎3縮圖"
+                            class="booking-banner-radius-thumb"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="/assets/images/booking-page/莉莎縮圖4.svg"
+                            alt="莉莎4縮圖"
+                            class="booking-banner-radius-thumb"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--swiper card mobile-->
+                  <div
+                    class="card booking-banner-card booking-banner-radius mb-8 d-md-none"
+                  >
+                    <div class="card-body d-flex flex-column p-6">
+                      <!-- Profile Info -->
+                      <div class="d-flex align-items-center mb-2">
+                        <img
+                          src="/assets/images/booking-page/i_profile.png"
+                          alt="會員照片"
+                          class="me-2"
+                        />
+                        <h3
+                          class="card-title m-0 fs-lg-3 fs-6 fw-bold text-gray-200"
+                        >
+                          莉莎的家
+                        </h3>
+                      </div>
+
+                      <!-- Ratings and Location -->
+                      <div class="d-flex gap-4 mb-2 fs-10">
+                        <div>
+                          <i class="bi bi-star-fill text-primary"></i>
+                          <span class="fw-bold text-primary">4.6</span>
+                        </div>
+                        <div>
+                          <i class="bi bi-geo-alt-fill text-gray-500"></i>
+                          <span class="text-gray-500"
+                            >中山區,台北市 (5.3km)</span
+                          >
+                        </div>
+                        <div>
+                          <i class="bi bi-person-fill text-gray-500"></i>
+                          <span class="text-gray-500">12</span>
+                        </div>
+                      </div>
+
+                      <!-- Introduction -->
+                      <p class="card-text mb-4 fs-md-10 fs-lg-9">
+                        大家好，莉莎的家是有六年經驗的專業寵物保母。我從小就熱愛動物，並照顧過超過50隻狗狗和貓咪。參加過多次寵物急救訓練，熟悉動物行為學，能應對各種突發情況。我相信每一隻寵物都有獨特需求，所以我會盡心提供最適合牠們的照顧，讓它們感到安心。
+                      </p>
+
+                      <!-- Booking Call to Action -->
+                      <div class="booking-banner-lead">
+                        <span
+                          class="d-block mb-2 text-center text-gray-500 fs-10"
+                        >
+                          在過去的48小時內，已經收到了十筆預約。
+                        </span>
+                        <a
+                          href="#"
+                          class="btn booking-banner-btn booking-primary-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          >立即預約</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--service-->
+                  <div class="mb-8 mb-md-16">
+                    <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">
+                      我能為您的寶貝做什麼?
+                    </h3>
+                    <!-- Service Card 1 -->
+                    <div class="card booking-service-card">
+                      <div
+                        class="card-body d-flex align-items-center justify-content-between"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="/assets/images/booking-page/i_遛狗散步.svg"
+                            alt="溜狗散步"
+                            class="me-3"
+                          />
+                          <span class="fw-bold fs-7 text-primary"
+                            >遛狗散步</span
+                          >
+                        </div>
+                        <span>
+                          <strong class="fw-bold fs-7">NT $550</strong>
+                          <span class="fs-11 text-gray-500">每次</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="card booking-service-card">
+                      <div
+                        class="card-body d-flex align-items-center justify-content-between"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="/assets/images/booking-page/i_上門餵食.svg"
+                            alt="上門餵食"
+                            class="me-3"
+                          />
+                          <span class="fw-bold fs-7 text-secondary"
+                            >上門餵食</span
+                          >
+                        </div>
+                        <span>
+                          <strong class="fw-bold fs-7">NT $300</strong>
+                          <span class="fs-11 text-gray-500">每次</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="card booking-service-card">
+                      <div
+                        class="card-body d-flex align-items-center justify-content-between"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="/assets/images/booking-page/i_日間托養.svg"
+                            alt="日間托養"
+                            class="me-3"
+                          />
+                          <span class="fw-bold fs-7 text-thirdly"
+                            >日間托養</span
+                          >
+                        </div>
+                        <span>
+                          <strong class="fw-bold fs-7">NT $1000</strong>
+                          <span class="fs-11 text-gray-500">每次</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--time-->
+                  <div class="mb-8 mb-md-16">
+                    <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">可服務時間</h3>
+                    <ul class="d-flex list-unstyled gap-4 fs-8">
+                      <li>週日</li>
+                      <li>週一</li>
+                      <li>週二</li>
+                      <li>週三</li>
+                      <li>週四</li>
+                      <li>週五</li>
+                      <li>週六</li>
+                    </ul>
+                  </div>
+                  <!--review-->
+                  <div>
+                    <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">
+                      毛爸媽的心聲
+                    </h3>
+                    <!-- Review Card 1 -->
+                    <div class="card booking-review-card">
+                      <div class="card-body">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="/assets/images/booking-page/i_劉曉華.svg"
+                              alt="劉曉華profile"
+                              class="me-3"
+                            />
+                            <div>
+                              <span class="d-block fw-bold fs-8 text-gray-200"
+                                >劉曉華</span
+                              >
+                              <span class="d-block fs-10 text-gray-500"
+                                >遛狗散步·2024年6月22日</span
+                              >
+                            </div>
+                          </div>
+                          <div class="text-primary">
+                            <i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i>
+                          </div>
+                        </div>
+                        <span class="text-gray-300"
+                          >雅雯對我的小狗旺旺非常有愛心，每天都會帶牠去散步和玩耍，旺旺回來後總是很開心。</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="card booking-review-card">
+                      <div class="card-body">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="/assets/images/booking-page/i_張怡君.svg"
+                              alt="張怡君profile"
+                              class="me-3"
+                            />
+                            <div>
+                              <span class="d-block fw-bold fs-8 text-gray-200"
+                                >張怡君</span
+                              >
+                              <span class="d-block fs-10 text-gray-500"
+                                >上門餵食·2024年5月12日</span
+                              >
+                            </div>
+                          </div>
+                          <div class="text-primary">
+                            <i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star"></i>
+                          </div>
+                        </div>
+                        <span class="text-gray-300"
+                          >我的貓咪米米在雅雯的照顧下變得很放鬆，她知道如何讓米米感到安全和受到愛護。</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="card booking-review-card">
+                      <div class="card-body">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="/assets/images/booking-page/i_陳建忠.svg"
+                              alt="陳建忠profile"
+                              class="me-3"
+                            />
+                            <div>
+                              <span class="d-block fw-bold fs-8 text-gray-200"
+                                >陳建忠</span
+                              >
+                              <span class="d-block fs-10 text-gray-500"
+                                >上門餵食·2024年4月27日</span
+                              >
+                            </div>
+                          </div>
+                          <div class="text-primary">
+                            <i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i>
+                          </div>
+                        </div>
+                        <span class="text-gray-300"
+                          >因為出國一週所以沒辦法照顧家裡的毛小孩，還好有雅雯的上門餵食服務，不得不說雅雯真的很貼心，通常我家那隻在陌生人面前是不太敢吃東西的，但因為雅雯的溫柔安撫，結果竟然吃得比平常還多！</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Review Card 4 -->
+                    <div class="card booking-review-card">
+                      <div class="card-body">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <div class="d-flex align-items-center">
+                            <img
+                              src="/assets/images/booking-page/i_黃美玲.svg"
+                              alt="黃美玲profile"
+                              class="me-3"
+                            />
+                            <div>
+                              <span class="d-block fw-bold fs-8 text-gray-200"
+                                >黃美玲</span
+                              >
+                              <span class="d-block fs-10 text-gray-500"
+                                >日間托養·2024年2月16日</span
+                              >
+                            </div>
+                          </div>
+                          <div class="text-primary">
+                            <i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i
+                            ><i class="bi bi-star-fill"></i>
+                          </div>
+                        </div>
+                        <span class="text-gray-300"
+                          >前陣子經常加班很晚回家，擔心家裡的毛小孩沒人照顧所以上網尋找日間托養的服務，很幸運遇到雅雯，讓我白天能放心的將毛小孩交給她照顧。</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- More Reviews -->
+                    <div class="card border-0 bg-transparent">
+                      <div class="card-body">
+                        <div class="mb-4 text-center fw-bold text-primary">
+                          <span>看更多卡片</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                <!--swiper card mobile-->
+                <div class="col-md-4 d-flex mt-8 mt-md-0 d-none d-md-block">
+                  <div
+                    class="card booking-banner-card booking-banner-radius booking-banner-sticky"
+                  >
+                    <div class="card-body d-flex flex-column p-6">
+                      <!-- Profile Info -->
+                      <div class="d-flex align-items-center mb-2">
+                        <img
+                          src="/assets/images/booking-page/i_profile.png"
+                          alt="會員照片"
+                          class="me-2"
+                        />
+                        <h3
+                          class="card-title m-0 fs-lg-3 fs-6 fw-bold text-gray-200"
+                        >
+                          莉莎的家
+                        </h3>
+                      </div>
 
-              <!-- Time Slot Selection -->
-              <div>
-                <label for="bookingDateSelect" class="form-label text-gray-500"
-                  >選擇時段</label
-                >
-                <select
-                  class="form-select booking-custom-form-select"
-                  id="bookingDateSelect"
-                >
-                  <option selected>時段</option>
-                  <option value="1">週一</option>
-                  <option value="2">週二</option>
-                  <option value="3">週三</option>
-                  <option value="4">週四</option>
-                  <option value="5">週五</option>
-                  <option value="6">週六</option>
-                  <option value="7">週日</option>
-                </select>
-              </div>
+                      <!-- Ratings and Location -->
+                      <div class="d-flex gap-4 mb-2 fs-10">
+                        <div>
+                          <i class="bi bi-star-fill text-primary"></i>
+                          <span class="fw-bold text-primary">4.6</span>
+                        </div>
+                        <div>
+                          <i class="bi bi-geo-alt-fill text-gray-500"></i>
+                          <span class="text-gray-500"
+                            >中山區,台北市 (5.3km)</span
+                          >
+                        </div>
+                        <div>
+                          <i class="bi bi-person-fill text-gray-500"></i>
+                          <span class="text-gray-500">12</span>
+                        </div>
+                      </div>
 
-              <!-- Service Selection -->
-              <div class="booking-divider">
-                <label for="bookingDateSelect" class="form-label text-gray-500"
-                  >選擇服務</label
-                >
-                <select
-                  class="form-select booking-custom-form-control"
-                  id="bookingDateSelect"
-                >
-                  <option selected>服務</option>
-                  <option value="1">遛狗散步</option>
-                  <option value="2">上門餵食</option>
-                  <option value="3">日間托養</option>
-                </select>
-              </div>
-            </div>
+                      <!-- Introduction -->
+                      <p class="card-text mb-2 fs-md-10 fs-lg-9">
+                        大家好，莉莎的家是有六年經驗的專業寵物保母。我從小就熱愛動物，並照顧過超過50隻狗狗和貓咪。參加過多次寵物急救訓練，熟悉動物行為學，能應對各種突發情況。我相信每一隻寵物都有獨特需求，所以我會盡心提供最適合牠們的照顧，讓它們感到安心。
+                      </p>
 
-            <!-- Modal Footer -->
-            <div
-              class="modal-footer border-0 d-flex justify-content-center pt-0"
-            >
-              <button
-                type="button"
-                class="btn fw-bold booking-outlined-primary-btn py-2 px-6"
-                data-bs-dismiss="modal"
-              >
-                取消
-              </button>
-              <button
-                type="button"
-                class="btn fw-bold booking-primary-btn py-2 px-6"
-              >
-                預約
-              </button>
+                      <!-- Booking Call to Action -->
+                      <div class="booking-banner-lead">
+                        <span
+                          class="d-block mb-2 text-center text-gray-500 fs-10"
+                        >
+                          在過去的48小時內，已經收到了十筆預約。
+                        </span>
+                        <a
+                          href="#"
+                          class="btn booking-banner-btn booking-primary-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#bookingModal"
+                          >立即預約</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Booking Banner Info -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+    <!-- Booking Modal -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered booking-modal-dialog">
+        <div class="modal-content px-3 pt-6 pb-8">
+          <div
+            class="modal-header border-0 justify-content-center d-flex position-relative"
+          >
+            <h3
+              class="modal-title position-absolute booking-model-title"
+              id="bookingModalLabel"
+            >
+              預約資訊
+            </h3>
+          </div>
 
+          <!-- Date Picker -->
+          <div class="modal-body">
+            <div>
+              <label for="date-picker-phone" class="form-label text-gray-500"
+                >選擇日期</label
+              >
+              <div class="position-relative">
+                <input
+                  type="text"
+                  id="date-picker-phone"
+                  class="form-control booking-custom-form-control w-100"
+                  readonly
+                  placeholder="日期"
+                />
+                <span
+                  class="position-absolute top-50 end-0 translate-middle-y pe-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#9e9e9e"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2 5l6 6 6-6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Time Slot Selection -->
+            <div>
+              <label for="bookingDateSelect" class="form-label text-gray-500"
+                >選擇時段</label
+              >
+              <select
+                class="form-select booking-custom-form-select"
+                id="bookingDateSelect"
+              >
+                <option selected>時段</option>
+                <option value="1">週一</option>
+                <option value="2">週二</option>
+                <option value="3">週三</option>
+                <option value="4">週四</option>
+                <option value="5">週五</option>
+                <option value="6">週六</option>
+                <option value="7">週日</option>
+              </select>
+            </div>
+
+            <!-- Service Selection -->
+            <div class="booking-divider">
+              <label for="bookingDateSelect" class="form-label text-gray-500"
+                >選擇服務</label
+              >
+              <select
+                class="form-select booking-custom-form-control"
+                id="bookingDateSelect"
+              >
+                <option selected>服務</option>
+                <option value="1">遛狗散步</option>
+                <option value="2">上門餵食</option>
+                <option value="3">日間托養</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer border-0 d-flex justify-content-center pt-0">
+            <a
+              type="button"
+              class="btn fw-bold booking-outlined-primary-btn py-2 px-6 d-inline-block"
+              style="line-height: 1.6"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </a>
+            <a
+              href="payment.html"
+              class="btn fw-bold booking-primary-btn py-2 px-6 d-inline-block"
+              style="line-height: 1.6"
+            >
+              預約
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

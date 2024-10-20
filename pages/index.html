@@ -5,22 +5,331 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
     <!-- banner / Chung -->
-
+    <section class="bg-gradient-primary">
+      <div class="index-banner-bg">
+        <div class="container">
+          <div class="index-banner position-relative">
+            <div class="banner-title w-50 pt-18 pt-lg-27">
+              <h1 class="text-white fs-3 fs-lg-1 mb-4">最值得您<br/>信賴的<span class="d-lg-none"><br/></span>寵物保母</h1>
+              <p class="d-none d-lg-block text-white fs-7">我們用心為每一位毛孩提供無微不至的照顧服務，讓您的孩子在保母們的呵護下，感受到最真摯的關愛與溫暖</p>
+            </div>
+            <div class="position-absolute top-100 start-0 end-0 translate-middle-y px-3">
+              <div class="row justify-content-md-center">
+                <div class="col-lg-10">
+                  <div class="d-none d-md-block bg-light rounded-4 shadow-primary">
+                    <div class="py-4 px-6">
+                      <div class="row gx-4 align-items-end">
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">您的寵物</p>
+                          <div class="dropdown petNumDropdown">
+                            <a href="#" type="button"
+                              class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                                align-items-center"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside"
+                              aria-expanded="false">
+                              <div class="d-flex align-items-center" >
+                                <img src="../assets/images/search-page/Pet-icon.svg"
+                                  class="me-2"
+                                  alt="pet-icon">
+                                <p data-petNum-show>貓 / 狗</p>
+                              </div>
+                              <span class="material-symbols-outlined text-gray-500">
+                                keyboard_arrow_down
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu py-4 w-100">
+                              <li>
+                                <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                                  href="#">
+                                  <span>貓</span>
+                                  <div class="d-flex align-items-center">
+                                    <button type="button"
+                                      class="btn p-0">
+                                      <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                        data-count-btn="-"
+                                        data-pet-type="cat">
+                                      </i>
+                                    </button>
+                                    <p class="mx-3 text-gray-500" data-cat-num>0</p>
+                                    <button type="button"
+                                      class="btn p-0">
+                                      <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                       data-count-btn="+"
+                                       data-pet-type="cat">
+                                      </i>
+                                    </button>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                                  href="#">
+                                  <span>狗</span>
+                                  <div class="d-flex align-items-center">
+                                    <button type="button" class="btn p-0">
+                                      <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                        data-count-btn="-"
+                                        data-pet-type="dog">
+                                      </i>
+                                    </button>
+                                    <p class="mx-3 text-gray-500" data-dog-num>0</p>
+                                    <button type="button" class="btn p-0">
+                                      <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                        data-count-btn="+"
+                                        data-pet-type="dog">
+                                      </i>
+                                    </button>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">您的地區</p>
+                          <div class="dropdown">
+                            <a href="#" type="button"
+                              class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                                align-items-center"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <div class="d-flex align-items-center">
+                                <img src="../assets/images/search-page/map-icon.svg"
+                                  class="me-2"
+                                  alt="map-icon">     
+                                <p data-area-show>地區</p>
+                              </div>
+                              <span class="material-symbols-outlined text-gray-500">
+                                keyboard_arrow_down
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu py-4 w-100 city-select-container"
+                              data-city-select>
+                              <li>
+                                <a class="dropdown-item py-2 px-4 mb-2 bg-gray-1000-hover"
+                                  href="#">
+                                  新北市
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">照顧期間</p>
+                          <div class="position-relative">
+                            <input type="text"
+                              id="date-picker-desk"
+                              class="custom-dropdown-toggle border-0 w-100"
+                              readonly>
+                            <div class="d-flex align-items-center position-absolute top-50 start-0   translate-middle-y ps-4 pe-none" data-date-show>
+                              <img src="../assets/images/search-page/calender-icon.svg"
+                                class="me-2"
+                                alt="map-icon">
+                              日期
+                            </div>
+                            <span class="material-symbols-outlined text-gray-500 position-absolute top-50 end-0 translate-middle-y pe-4 pe-none">
+                              keyboard_arrow_down
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <a href="#" class="btn btn-primary d-block">
+                            搜尋保母
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-none p-3 rounded-4 bg-light d-flex align-items-center shadow-primary">
+                    <a href="#" class="custom-dropdown-toggle d-block me-3 flex-grow-1"
+                      data-bs-toggle="modal" data-bs-target="#sitter-search-modal">
+                      您的需求
+                    </a>
+                    <a href="#" class="btn btn-primary"
+                      data-bs-toggle="modal" data-bs-target="#sitter-search-modal">
+                      搜尋
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade sitter-search-modal"
+          id="sitter-search-modal"
+          tabindex="-1"
+          aria-labelledby="sitter-search-modal"
+          aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body pb-0">
+              <div class="py-6 px-2 border-bottom border-gray-800">
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">您的寵物</p>
+                  <div class="dropdown petNumDropdown">
+                    <a href="#" type="button"
+                      class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                        align-items-center"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      <div class="d-flex align-items-center" >
+                        <img src="../assets/images/search-page/Pet-icon.svg"
+                          class="me-2"
+                          alt="pet-icon">
+                        <p data-petNum-show>貓 / 狗</p>
+                      </div>
+                      <span class="material-symbols-outlined text-gray-500">
+                        keyboard_arrow_down
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu py-4 w-100">
+                      <li>
+                        <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                          href="#">
+                          <span>貓</span>
+                          <div class="d-flex align-items-center">
+                            <button type="button"
+                              class="btn p-0">
+                              <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                data-count-btn="-"
+                                data-pet-type="cat">
+                              </i>
+                            </button>
+                            <p class="mx-3 text-gray-500" data-cat-num>0</p>
+                            <button type="button"
+                              class="btn p-0">
+                              <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                data-count-btn="+"
+                                data-pet-type="cat">
+                              </i>
+                            </button>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                          href="#">
+                          <span>狗</span>
+                          <div class="d-flex align-items-center">
+                            <button type="button" class="btn p-0">
+                              <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                data-count-btn="-"
+                                data-pet-type="dog">
+                              </i>
+                            </button>
+                            <p class="mx-3 text-gray-500" data-dog-num>0</p>
+                            <button type="button" class="btn p-0">
+                              <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                data-count-btn="+"
+                                data-pet-type="dog">
+                              </i>
+                            </button>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">您的地區</p>
+                  <div class="dropdown">
+                    <a href="#" type="button"
+                      class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                        align-items-center"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <div class="d-flex align-items-center">
+                        <img src="../assets/images/search-page/map-icon.svg"
+                          class="me-2"
+                          alt="map-icon">     
+                        <p data-area-show>地區</p>
+                      </div>
+                      <span class="material-symbols-outlined text-gray-500">
+                        keyboard_arrow_down
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu py-4 w-100 city-select-container"
+                      data-city-select>
+                      <li>
+                        <a class="dropdown-item py-2 px-4 mb-2 bg-gray-1000-hover"
+                          href="#">
+                          新北市
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">照顧期間</p>
+                  <div class="position-relative">
+                    <input type="text"
+                      id="date-picker-phone"
+                      class="custom-dropdown-toggle border-0 w-100"
+                      readonly>
+                    <div class="d-flex align-items-center position-absolute top-50 start-0 translate-middle-y
+                      ps-4 pe-none" data-date-show>
+                      <img src="../assets/images/search-page/calender-icon.svg"
+                        class="me-2"
+                        alt="map-icon">
+                      日期
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500 position-absolute top-50 end-0 translate-middle-y pe-4 pe-none">
+                      keyboard_arrow_down
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 d-flex">
+              <button type="button" class="btn btn-outline-primary w-100 me-3"
+                data-bs-dismiss="modal">
+                取消
+              </button>
+              <a href="search.html"
+                data-bs-dismiss="modal"
+                class="btn btn-primary w-100">
+                搜尋
+              </a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- 保母服務 / Joy -->
     <section class="index-service-content">
-      <h2>\ <strong>最 Pawfect 的寵物保母服務</strong> /</h2>
-      <div class="container">
+      <h2 class="fs-5 fs-md-3 d-md-block d-none d-flex">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="pe-6 fs-6">\</span>
+          <span class="text-center fw-bold">最 Pawfect 的寵物保母服務</span>
+          <span class="ps-6 fs-6">/</span>
+        </div>
+      </h2>
 
+      <h2
+        class="fs-5 fs-md-3 d-md-none d-block d-flex align-items-center justify-content-center"
+      >
+        <span class="pe-4 fs-6">\</span>
+        <div class="text-center">
+          <span class="d-block fw-bold">最 Pawfect 的</span>
+          <span class="d-block fw-bold">寵物保母服務</span>
+        </div>
+        <span class="ps-4 fs-6">/</span>
+      </h2>
+
+      <div class="container">
         <div class="row justify-content-center">
           <!--1-->
           <div class="col-md-10 index-service-list">
             <div class="row justify-content-md-around">
-
               <div class="col-md-5 justify-content-md-start index-service-img">
                 <img src="/assets/images/外宿寄養.svg" alt="外宿寄養照片" />
               </div>
@@ -32,71 +341,60 @@
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
 
-        <!--2-->
-        <div class="col-md-10 index-service-list">
-          <div class="row justify-content-md-around flex-md-row-reverse">
-          
-            <div class="col-md-5 justify-content-md-end index-service-img">
-              <img src="/assets/images/遛狗散步.svg" alt="遛狗散步照片" />
-                </div>
-                  <div class="col-md-5 index-service-lead">
-                    <div>
-                    <h3>遛狗散步</h3>
-                    <p>
+          <!--2-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around flex-md-row-reverse">
+              <div class="col-md-5 justify-content-md-end index-service-img">
+                <img src="/assets/images/遛狗散步.svg" alt="遛狗散步照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>遛狗散步</h3>
+                  <p>
                     忙碌到沒時間遛狗？我們的專業保母會帶您的愛犬出門散步，釋放精力並保持健康，為它們提供快樂的戶外時光。
-                    </p>
-                  </div>
+                  </p>
                 </div>
-        
-        </div>
-        
-      </div>
+              </div>
+            </div>
+          </div>
 
           <!--3-->
           <div class="col-md-10 index-service-list">
             <div class="row justify-content-md-around">
-
               <div class="col-md-5 justify-content-md-start index-service-img">
                 <img src="/assets/images/日間托養.svg" alt="日間托養照片" />
               </div>
               <div class="col-md-5 index-service-lead">
                 <div>
                   <h3>日間托養</h3>
-        <p>
-          白天上班沒人陪伴寵物？選擇我們的日間托養服務，保證您的毛孩在安全舒適的環境中獲得全方位的照顧和玩樂。
-        </p>
+                  <p>
+                    白天上班沒人陪伴寵物？選擇我們的日間托養服務，保證您的毛孩在安全舒適的環境中獲得全方位的照顧和玩樂。
+                  </p>
                 </div>
               </div>
-
             </div>
           </div>
 
-        <!--4-->
-        <div class="col-md-10 index-service-list">
-          <div class="row justify-content-md-around flex-md-row-reverse">
-          
-            <div class="col-md-5 justify-content-md-end index-service-img">
-              <img src="/assets/images/上門餵食.svg" alt="上門餵食照片" />
+          <!--4-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around flex-md-row-reverse">
+              <div class="col-md-5 justify-content-md-end index-service-img">
+                <img src="/assets/images/上門餵食.svg" alt="上門餵食照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>上門餵食</h3>
+                  <p>
+                    出差旅行無法餵養毛孩？我們提供上門餵食服務，依照指示，準時為寵物餵食、陪伴、玩耍、運動，並進行基本清潔，讓您安心。
+                  </p>
                 </div>
-                  <div class="col-md-5 index-service-lead">
-                    <div>
-                      <h3>上門餵食</h3>
-                      <p>
-                        出差旅行無法餵養毛孩？我們提供上門餵食服務，依照指示，準時為寵物餵食、陪伴、玩耍、運動，並進行基本清潔，讓您安心。
-                      </p>
-                  </div>
-                </div>
-        
+              </div>
+            </div>
+          </div>
         </div>
-        
-      </div>
-
-        </div>
-
       </div>
     </section>
 
@@ -368,181 +666,181 @@
     <!-- 預定體驗 / Grace -->
 
     <!-- 常見問題 / Joy -->
-     <section class="index-qna-cat-deco">
-       <div class="container index-qna-content">
-         <div class="row justify-content-center ">
-           <div class="col col-md-8 text-center">
-             <div class="index-qna-title-container">
-               <h2>常見問題</h2>
-             </div>
-   
-             <div class="accordion accordion-flush" id="accordionFlushExample">
-               <div class="accordion-item">
-                 <h3 class="accordion-header">
-                   <button
-                     class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
-                     type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapseOne"
-                     aria-expanded="false"
-                     aria-controls="flush-collapseOne"
-                   >
-                     預定寵物保母費用?
-                   </button>
-                 </h3>
-                 <div
-                   id="flush-collapseOne"
-                   class="accordion-collapse collapse"
-                   data-bs-parent="#accordionFlushExample"
-                 >
-                   <div class="accordion-body">
-                     <ul class="text-start list-unstyled">
-                       <li>
-                         安親寄宿:媒合費用$ 300/12H 起,會依據毛小孩體型調整。
-                       </li>
-                       <li>
-                         到府保母:$ 300/次起,單次半小時。超過半小時需加購。
-                         遛狗服務:$
-                       </li>
-                       <li>200/次起,單次半小時。超過半小時需加購。 到府洗澡:$</li>
-                       <li class="mb-5">
-                         450/次起,費用會依據毛小孩種類與體型有所調整。
-                       </li>
-                       <li>
-                         *所有服務費用皆含「寵物保險」及「服務品質保障」,服務不滿意全額退款。
-                       </li>
-                     </ul>
-                   </div>
-                 </div>
-               </div>
-   
-               <div class="accordion-item">
-                 <h3 class="accordion-header">
-                   <button
-                     class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
-                     type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapseTwo"
-                     aria-expanded="false"
-                     aria-controls="flush-collapseTwo"
-                   >
-                     寵物保母服務包括哪些內容?
-                   </button>
-                 </h3>
-                 <div
-                   id="flush-collapseTwo"
-                   class="accordion-collapse collapse"
-                   data-bs-parent="#accordionFlushExample"
-                 >
-                   <div class="accordion-body text-start">
-                     我們的寵物保母服務包括餵食、散步、洗澡、遊戲和陪伴等。根據您的需求，我們也可以提供特定的服務，如藥物管理和訓練。
-                   </div>
-                 </div>
-               </div>
-   
-               <div class="accordion-item">
-                 <h3 class="accordion-header">
-                   <button
-                     class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
-                     type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapseThree"
-                     aria-expanded="false"
-                     aria-controls="flush-collapseThree"
-                   >
-                     如何預訂寵物保母服務?
-                   </button>
-                 </h3>
-                 <div
-                   id="flush-collapseThree"
-                   class="accordion-collapse collapse"
-                   data-bs-parent="#accordionFlushExample"
-                 >
-                   <div class="accordion-body text-start">
-                     您可以通過我們的網站在線預訂,選擇合適的日期和時間,並提供您的寵物資料。我們會根據您的需求挑選合適的保母,供您選擇並預訂。
-                   </div>
-                 </div>
-               </div>
-   
-               <div class="accordion-item">
-                 <h3 class="accordion-header">
-                   <button
-                     class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
-                     type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapseFour"
-                     aria-expanded="false"
-                     aria-controls="flush-collapseFour"
-                   >
-                     如果我的寵物有特殊需求怎麼辦?
-                   </button>
-                 </h3>
-                 <div
-                   id="flush-collapseFour"
-                   class="accordion-collapse collapse"
-                   data-bs-parent="#accordionFlushExample"
-                 >
-                   <div class="accordion-body text-start">
-                     在預訂時,請詳細告知我們您的寵物有何特殊需求,我們會根據需求選擇最合適的保母,確保您的寵物得到專業的照顧。
-                   </div>
-                 </div>
-               </div>
-   
-               <div class="accordion-item">
-                 <h3 class="accordion-header">
-                   <button
-                     class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
-                     type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapseFive"
-                     aria-expanded="false"
-                     aria-controls="flush-collapseFive"
-                   >
-                     那些地區有提供寵物保母服務?
-                   </button>
-                 </h3>
-                 <div
-                   id="flush-collapseFive"
-                   class="accordion-collapse collapse"
-                   data-bs-parent="#accordionFlushExample"
-                 >
-                   <div class="accordion-body text-start">
-                     全台各地皆有寵物保母服務。
-                   </div>
-                 </div>
-               </div>
-   
-               <div class="accordion-item">
-                 <h3 class="accordion-header">
-                   <button
-                     class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
-                     type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapseSix"
-                     aria-expanded="false"
-                     aria-controls="flush-collapseSix"
-                   >
-                     我可以隨時和寵物保母聯絡,了解寵物情形嗎?
-                   </button>
-                 </h3>
-                 <div
-                   id="flush-collapseSix"
-                   class="accordion-collapse collapse"
-                   data-bs-parent="#accordionFlushExample"
-                 >
-                   <div class="accordion-body text-start">
-                     是的,您可以通過我們的網站或
-                     App與保母進行溝通,了解您的寵物狀況。我們也會提供定期更新和照片,讓您隨時了解寵物的情況。
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
+    <section class="index-qna-cat-deco" id="index-qna">
+      <div class="container index-qna-content">
+        <div class="row justify-content-center">
+          <div class="col col-md-8 text-center">
+            <div class="index-qna-title-container">
+              <h2>常見問題</h2>
+            </div>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    預定寵物保母費用?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="text-start list-unstyled">
+                      <li>
+                        安親寄宿:媒合費用$ 300/12H 起,會依據毛小孩體型調整。
+                      </li>
+                      <li>
+                        到府保母:$ 300/次起,單次半小時。超過半小時需加購。
+                        遛狗服務:$
+                      </li>
+                      <li>
+                        200/次起,單次半小時。超過半小時需加購。 到府洗澡:$
+                      </li>
+                      <li class="mb-5">
+                        450/次起,費用會依據毛小孩種類與體型有所調整。
+                      </li>
+                      <li>
+                        *所有服務費用皆含「寵物保險」及「服務品質保障」,服務不滿意全額退款。
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    寵物保母服務包括哪些內容?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    我們的寵物保母服務包括餵食、散步、洗澡、遊戲和陪伴等。根據您的需求，我們也可以提供特定的服務，如藥物管理和訓練。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    如何預訂寵物保母服務?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    您可以通過我們的網站在線預訂,選擇合適的日期和時間,並提供您的寵物資料。我們會根據您的需求挑選合適的保母,供您選擇並預訂。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    如果我的寵物有特殊需求怎麼辦?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    在預訂時,請詳細告知我們您的寵物有何特殊需求,我們會根據需求選擇最合適的保母,確保您的寵物得到專業的照顧。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    那些地區有提供寵物保母服務?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    全台各地皆有寵物保母服務。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSix"
+                  >
+                    我可以隨時和寵物保母聯絡,了解寵物情形嗎?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseSix"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    是的,您可以通過我們的網站或
+                    App與保母進行溝通,了解您的寵物狀況。我們也會提供定期更新和照片,讓您隨時了解寵物的情況。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
-      </section>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

@@ -1,1 +1,39 @@
 <!-- Chung -->
+<nav class="navbar sticky-top bg-light navbar-expand-lg py-lg-4 py-3" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><picture>
+            <source srcset="../assets/images/layout-header-logo.png"
+                    media="(min-width: 796px)">
+            <img src="../assets/images/layout-header-logo-sm.png">
+          </picture>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header header-nav-bg-color p-3">
+                <a class="navbar-brand" href="#"><img src="../assets/images/layout-header-logo-sm.png" alt="logo"></a>
+                <button type="button" class="ms-auto btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-3 px-lg-0 header-nav-bg-color">
+                <ul class="navbar-nav flex-grow-1 mb-12 mb-lg-0">
+                    <li class="nav-item my-8 my-lg-0 mx-lg-11">
+                    <a class="nav-link link-gray-100" href="search.html">搜尋保母</a>
+                    </li>
+                    <li class="nav-item mb-8 mb-lg-0 me-lg-11">
+                    <a class="nav-link link-gray-100" href="#">成為保母</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link link-gray-100" href="#index-qna">常見問題</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column-reverse h-100 flex-lg-row align-items-center">
+                    <img class="d-lg-none d-block mt-auto" src="../assets/images/layout-header-woman.png" alt="woman">
+                    <a class="d-lg-none btn btn-outline-primary w-100" href="#">登入</a>
+                    <a class="d-none d-lg-block flex-shrink-0 me-6" href="#">登入</a>
+                    <a class="btn btn-primary w-100 w-lg-auto text-white mb-3 mb-lg-0">註冊</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

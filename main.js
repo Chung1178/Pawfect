@@ -1,5 +1,4 @@
-import './assets/scss/all.scss';
-import 'bootstrap/dist/js/bootstrap.min.js';
-//swiper
-import "./assets/js/booking";
+import "./assets/scss/all.scss";
+import "bootstrap/dist/js/bootstrap.min.js";
+
 console.log("Hello world!");

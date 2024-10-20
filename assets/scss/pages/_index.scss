@@ -146,21 +146,12 @@ body {
     }
   }
 
-  /* 小於992px，大於768px 時，卡片顯示為單欄式 */
-  @media (max-width: 991px) and (min-width: 768px) {
-    .col-lg-4, .col-md-4, .col-sm-4 {
-      flex: 0 0 33.3333%;
-      max-width: 33.3333%;
-      margin: 10px;
-    }
-  }
-
-  /* 小於768px 時，卡片顯示為單欄式 */
-  @media (max-width: 767px) {
+   /* 小於767px 時，卡片顯示為單欄式 */
+   @media (max-width: 767px) {
     .col-md-4 {
-      flex: 0 0 calc(100% - 48px);
-      max-width: calc(100% - 48px);
-      margin: 5px 24px;
+      flex: 0 0 calc(90% - 48px);
+      max-width: calc(90% - 48px);
+      margin: 10px 24px;
     }
   }
 
@@ -189,9 +180,7 @@ body {
       height: 40px;
     }
   }
-}
 
-  
   .pawfect-title {
     text-align: center;
     font-size: 2.5rem;
@@ -199,14 +188,14 @@ body {
     margin-bottom: 0.5rem;
     white-space: nowrap;
   }
-  
+
   .pawfect-subtitle {
     font-size: 1.25rem;
     color: $gray-300;
     margin-bottom: 3rem;
     text-align: center; // 副標題置中
   }
-  
+
   /* 確保卡片等高 */
   .order-process .row {
     display: flex; /* 將 row 設為 flex 排版 */
@@ -214,29 +203,29 @@ body {
     justify-content: center; /* 水平置中 */
     align-items: stretch; /* 讓卡片等高 */
   }
-  
+
   /* 確保圖標在卡片之間置中 */
   .col-md-auto {
     display: flex;
     justify-content: center;
     align-items: center; /* 垂直置中 */
   }
-  
+
   .card-order {
     font-weight: bold;
     font-size: 4rem;
   }
-  
+
   .card-icon {
     margin: 0 auto 1.5rem auto;
   }
-  
+
   .card-icon img {
     width: 140px;
     height: 100px;
     object-fit: contain;
   }
-  
+
   /* 卡片樣式：確保所有卡片等高 */
   .card {
     display: flex; /* 新增：使用 flex 排版 */
@@ -248,28 +237,29 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
   }
-  
+
   .card:hover {
     transform: scale(1.05);
   }
-  
+
   .decorative-icon-1 {
     transition: transform 0.3s;
   }
-  
+
   .decorative-icon-1:hover {
     transform: rotate(120deg);
   }
-  
+
   .decorative-icon-2 {
     transform: rotate(120deg);
     transition: transform 0.3s; /* 為圖標添加過渡效果 */
   }
-  
+
   .decorative-icon-2:hover {
     transform: rotate(15deg);
   }
-  
+}
+
 
 //  常見問題 / Joy
 

@@ -19,6 +19,74 @@ body {
     background-position: top left, right bottom, center;
     background-size: auto, auto, cover;
   }
+
+  // Swiper
+  .swiper {
+    width: 100%;
+    height: 197px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(md) {
+      height: 481px;
+    }
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .mySwiper2 {
+    height: 197px;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      height: 481px;
+    }
+  }
+
+  .mySwiper {
+    height: 64px;
+    box-sizing: border-box;
+    margin-top: 16px; //圖片和縮圖上方之間的間距
+    gap: 16px;
+    @include media-breakpoint-up(md) {
+      height: 88px;
+    }
+
+    .swiper-slide {
+      width: 64px !important;
+      opacity: 0.9;
+      height: 64px;
+      @include media-breakpoint-up(md) {
+        width: 88px !important;
+        height: 88px;
+      }
+
+      &-thumb-active {
+        opacity: 1;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 .booking-banner-container-padding {
@@ -98,74 +166,6 @@ body {
   color: $white;
   width: 100%;
   font-size: 0.875rem;
-}
-
-// Swiper
-.swiper {
-  width: 100%;
-  height: 197px;
-  margin-left: auto;
-  margin-right: auto;
-  @include media-breakpoint-up(md) {
-    height: 481px;
-  }
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.mySwiper2 {
-  height: 197px;
-  width: 100%;
-
-  @include media-breakpoint-up(md) {
-    height: 481px;
-  }
-}
-
-.mySwiper {
-  height: 64px;
-  box-sizing: border-box;
-  margin-top: 16px; //圖片和縮圖上方之間的間距
-  gap: 16px;
-  @include media-breakpoint-up(md) {
-    height: 88px;
-  }
-
-  .swiper-slide {
-    width: 64px !important;
-    opacity: 0.9;
-    height: 64px;
-    @include media-breakpoint-up(md) {
-      width: 88px !important;
-      height: 88px;
-    }
-
-    &-thumb-active {
-      opacity: 1;
-    }
-
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
 }
 
 // Swiper navigation buttons

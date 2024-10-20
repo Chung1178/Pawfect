@@ -2,38 +2,33 @@ body {
   background: linear-gradient(90deg, #fff7f0 0%, #ffffff 50%, #fff7f0 100%);
 }
 
-.booking-bg-gradient-primary {
-  background: linear-gradient(90deg, #ffab82 0%, #f6844d 50%, #ffab82 100%);
-  padding-bottom: 11.5rem;
-
-  @include media-breakpoint-up(md) {
-    padding-bottom: 0;
-  }
-}
 .booking-banner {
-  padding-bottom: -11.5rem;
+  background: linear-gradient(90deg, #ffab82 0%, #f6844d 50%, #ffab82 100%);
+  height: 535px; // 設定漸層背景的高度。
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
+    height: 340px;
     background-image: url("/assets/images/booking-page/背景上方圓圈.svg"),
-      url("/assets/images/booking-page/背景下方圓圈.svg");
-    background-repeat: no-repeat;
-    background-position: top left, right bottom;
-    padding-bottom: 0;
+      url("/assets/images/booking-page/背景下方圓圈.svg"),
+      linear-gradient(90deg, #ffab82 0%, #f6844d 50%, #ffab82 100%);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top left, right bottom, center;
+    background-size: auto, auto, cover;
   }
 }
 
-//custom
 .booking-banner-container-padding {
-  padding-top: 12.5rem;
-  padding-bottom: 9rem;
+  padding-top: 0.5rem;
   @include media-breakpoint-up(md) {
-    padding-top: 10rem; //pt-md-40
-    padding-bottom: 11.5rem; //pb-md-46
+    padding-top: 6rem;
   }
 }
 
 .booking-banner-padding {
-  //padding-top: 2.25rem;
   top: 0;
   left: 0 !important;
   right: 0 !important;
@@ -42,7 +37,6 @@ body {
     transform: translateY(-50%) !important;
     padding-top: 92.25rem;
   }
-  //transform: translate(-50%);
 }
 
 .mt-mobile-32 {
@@ -54,10 +48,7 @@ body {
 
 .booking-banner-sticky {
   @include media-breakpoint-up(md) {
-    position: sticky;
     top: 24px;
-    z-index: 100;
-    height: fit-content;
   }
 }
 
@@ -68,20 +59,6 @@ body {
   }
 }
 
-//.booking-banner-content,
-//.booking-service-content,
-//.booking-time-content,
-//.booking-review-content {
-//height: 100%;
-//margin: 0 auto 2rem;
-//padding: 0;
-//z-index: 2;
-
-//@include media-breakpoint-up(lg) {
-//margin-bottom: 4rem;
-//}
-//}
-
 .booking-banner-card,
 .booking-service-card,
 .booking-review-card {
@@ -91,7 +68,6 @@ body {
   border: none;
 }
 
-//new
 .booking-banner-card {
   max-height: 481px;
   height: 100%;
@@ -111,7 +87,6 @@ body {
 
 .booking-banner-lead {
   margin-top: auto;
-  //padding-top: 20px;
 
   span {
     font-size: 0.875rem;
@@ -128,7 +103,7 @@ body {
 // Swiper
 .swiper {
   width: 100%;
-  height: 197px; //new
+  height: 197px;
   margin-left: auto;
   margin-right: auto;
   @include media-breakpoint-up(md) {
@@ -167,7 +142,6 @@ body {
   height: 64px;
   box-sizing: border-box;
   margin-top: 16px; //圖片和縮圖上方之間的間距
-  // padding: 16px 0;
   gap: 16px;
   @include media-breakpoint-up(md) {
     height: 88px;
@@ -190,7 +164,7 @@ body {
     }
 
     img {
-      height: 100%; //88px;
+      height: 100%;
       width: 100%;
       object-fit: cover;
     }

@@ -145,18 +145,15 @@ body {
   gap: 16px;
   @include media-breakpoint-up(md) {
     height: 88px;
-    gap: 16px;
   }
 
   .swiper-slide {
-    width: 64px;
+    width: 64px !important;
     opacity: 0.9;
-
-    aspect-ratio: 1 / 1;
+    height: 64px;
     @include media-breakpoint-up(md) {
-      width: 88px;
-
-      aspect-ratio: 1 / 1;
+      width: 88px !important;
+      height: 88px;
     }
 
     &-thumb-active {

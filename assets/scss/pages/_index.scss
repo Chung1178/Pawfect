@@ -190,3 +190,22 @@
 .accordion-item {
   background-color: transparent !important;
 }
+
+// fixed button
+
+.index-fixed-button {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  width: 72px;
+  height: 72px;
+  z-index: 1010;
+  text-shadow: 0px 0px 24px $light;
+  box-shadow: 0px 4px 80px 0px $primary;
+  @include media-breakpoint-up(md) {
+    right: 48px;
+    bottom: 48px;
+    width: 84px;
+    height: 84px;
+  }
+}

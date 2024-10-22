@@ -297,3 +297,19 @@ const dataPickerDesk = new AirDatepicker('#date-picker-desk', {
   ...basicSettings,
 })
 
+// search modal toggle
+
+const searchButton = document.querySelector('[data-search-btn]');
+const searchSpinner = document.querySelector('[data-search-spinner]');
+function toggleSpinner(e) {
+  e.preventDefault();
+  searchSpinner.classList.toggle('d-none');
+  sitterContainer.classList.remove('animate__fadeInUp');
+  setTimeout(() => {
+    searchSpinner.classList.toggle('d-none');
+    sitterContainer.classList.add('animate__fadeInUp');
+  }, 2000);
+}
+searchButton.addEventListener('click', toggleSpinner);
+
+

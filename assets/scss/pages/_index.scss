@@ -1,10 +1,12 @@
 //  banner / Chung
 .index-banner-bg {
-  background-image: url("../images/保母sm.png"), url("../images/index-banner-貓sm.png");
+  background-image: url("../images/保母sm.png"),
+    url("../images/index-banner-貓sm.png");
   background-repeat: no-repeat;
   background-position: right 0 bottom 0, left 13.8% top 0;
   @include media-breakpoint-up(lg) {
-    background-image: url("../images/保母.png"), url("../images/index-banner-貓.png");
+    background-image: url("../images/保母.png"),
+      url("../images/index-banner-貓.png");
     background-position: right 15% bottom 0, left 43% top 0;
   }
 }
@@ -18,7 +20,7 @@
     top: 8px !important;
   }
 
-  .type-select-btn{
+  .type-select-btn {
     color: $gray-300;
     border-bottom: 3px solid transparent;
     &:hover,
@@ -76,7 +78,13 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    @include media-breakpoint-up(md) {
+    //make mobile width 300px
+    img {
+      width: 300px;
+      max-width: 100%;
+      @include media-breakpoint-up(md) {
+        width: 100%;
+      }
     }
   }
 
@@ -99,14 +107,6 @@
     p {
       color: $gray-300;
     }
-  }
-}
-//make mobile width 300px
-.index-service-img img {
-  width: 300px;
-  max-width: 100%;
-  @include media-breakpoint-up(md) {
-    width: 100%;
   }
 }
 
@@ -136,6 +136,17 @@
       background-image: url("../../assets/images/貓web.png");
       background-repeat: no-repeat;
       background-position: right 2px bottom 0;
+    }
+    .accordion-item {
+      background-color: transparent !important;
+    }
+    .accordion-button {
+      &:hover {
+        color: $primary !important;
+      }
+      &:not(.collapsed):hover {
+        color: $gray-200 !important;
+      }
     }
   }
 
@@ -185,10 +196,6 @@
       transform: rotate(42deg);
     }
   }
-}
-
-.accordion-item {
-  background-color: transparent !important;
 }
 
 // fixed button

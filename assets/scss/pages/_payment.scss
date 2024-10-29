@@ -38,8 +38,15 @@
     }
 }
 
+/* 付款表單 */ 
 .payment-type {
-    payment-type-select:hover{
+    .payment-type-select{
+        label {
+            color:$gray-200;
+        }
+    } 
+
+    .payment-type-select:hover{
         label {
             color:$primary;
         }
@@ -59,11 +66,5 @@
     }
     ::placeholder{
         color: $gray-300;
-    }
-}
-
-.payment-action{
-    .btn {
-        width: calc(50% - 4px);
     }
 }

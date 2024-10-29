@@ -119,21 +119,22 @@ countPetButtons.forEach(btn => {
     } else if (petType === 'dog' && selectSitterObj.dogNum >= 0) {
       countType === '+' ? selectSitterObj.dogNum ++ : selectSitterObj.dogNum --;
     }
-    checkDisabled(e);
+    checkDisabled({ e, countType, petType });
     renderCountPet(petType);
   })
 })
 
-function checkDisabled(e) {
-  if (selectSitterObj.dogNum === 0 || selectSitterObj.catNum === 0) {
-    const btn = e.target.closest('div').querySelector('[data-count-btn="-"]');
-    btn.classList.remove('text-gray-500')
-    btn.classList.add('text-gray-800', 'pe-none');
-  }
-  if (selectSitterObj.dogNum > 0 || selectSitterObj.catNum > 0) {
-    const btn = e.target.closest('div').querySelector('[data-count-btn="-"]');
-    btn.classList.remove('text-gray-800', 'pe-none')
-    btn.classList.add('text-gray-500')
+function checkDisabled({ e, countType, petType }) {
+  const btn = e.target.closest('div').querySelector('[data-count-btn="-"]');
+  if (countType === '+') {
+    btn.classList.remove('text-gray-800', 'pe-none');
+    btn.classList.add('text-gray-500');
+  } else if (countType === '-') {
+    if ((petType === 'cat' && selectSitterObj.catNum === 0) ||
+     (petType === 'dog' && selectSitterObj.dogNum === 0)) {
+      btn.classList.remove('text-gray-500');
+      btn.classList.add('text-gray-800', 'pe-none');
+    }
   }
 }
 
@@ -149,9 +150,13 @@ const petNumDropdowns = document.querySelectorAll('.petNumDropdown');
 petNumDropdowns.forEach(drop => {
   drop.addEventListener('hide.bs.dropdown', () => {
     petNumShowElems.forEach(elem => {
-      const catText = selectSitterObj.catNum ? `貓 ${selectSitterObj.catNum}隻` : '';
-      const dogText = selectSitterObj.dogNum ? `狗 ${selectSitterObj.dogNum}隻` : '';
-      elem.innerText = `${catText} ${ catText && dogText ? '/' : '' } ${dogText}`;
+      if (selectSitterObj.catNum === 0 && selectSitterObj.dogNum === 0) {
+        elem.innerHTML = '貓 / 狗';
+      } else {
+        const catText = selectSitterObj.catNum ? `貓 ${selectSitterObj.catNum}隻` : '';
+        const dogText = selectSitterObj.dogNum ? `狗 ${selectSitterObj.dogNum}隻` : '';
+        elem.innerText = `${catText} ${ catText && dogText ? '/' : '' } ${dogText}`;
+      }
     })
   })
 })

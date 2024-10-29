@@ -1,22 +1,15 @@
 .order-summary {
     background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
-} 
-
-.container .card {
-    border-radius: 1.5rem; /* 24px */
-    background-color: $light;
-    border: none !important;
-}
-
-.card-title {
-    color: $gray-200;
-    font-weight: bold;
-    font-size: 32px; /* 基本字型大小 */
-}
-
-.card-text {
-    color: $gray-300;
-    font-size: 16px; /* 基本字型大小 */
+    
+    .modal-content{
+        max-width: 360px;
+    }
+    .container .card {
+        border-radius: 1.5rem; /* 24px */
+        background-color: $light;
+        border: none !important;
+        box-shadow: 0px 4px 40px 0px #F6844D1F;
+    }
 }
 
 .custom-title {
@@ -36,14 +29,6 @@
     .card {
         margin-bottom: 30px; /* 平板端卡片底部間距 */
     }
-
-    .card-title {
-        font-size: 28px; /* 平板端字型大小調整 */
-    }
-
-    .card-text {
-        font-size: 14px; /* 平板端字型大小調整 */
-    }
 }
 
 /* 桌面端調整（大於992px） */
@@ -51,12 +36,34 @@
     .card {
         margin-bottom: 40px; /* 桌面端卡片底部間距 */
     }
+}
 
-    .card-title {
-        font-size: 36px; /* 桌面端字型大小調整 */
+.payment-type {
+    payment-type-select:hover{
+        label {
+            color:$primary;
+        }
+        input {
+            border-color:$primary;
+        }
+    } 
+}
+
+.payment-type-content{
+    label {
+        color: $gray-500;
     }
+    select, input {
+        background-color: $gray-1000;
+        border: none;
+    }
+    ::placeholder{
+        color: $gray-300;
+    }
+}
 
-    .card-text {
-        font-size: 18px; /* 桌面端字型大小調整 */
+.payment-action{
+    .btn {
+        width: calc(50% - 4px);
     }
 }

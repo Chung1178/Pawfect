@@ -1,10 +1,12 @@
 //  banner / Chung
 .index-banner-bg {
-  background-image: url("../images/保母sm.png"), url("../images/index-banner-貓sm.png");
+  background-image: url("../images/保母sm.png"),
+    url("../images/index-banner-貓sm.png");
   background-repeat: no-repeat;
   background-position: right 0 bottom 0, left 13.8% top 0;
   @include media-breakpoint-up(lg) {
-    background-image: url("../images/保母.png"), url("../images/index-banner-貓.png");
+    background-image: url("../images/保母.png"),
+      url("../images/index-banner-貓.png");
     background-position: right 15% bottom 0, left 43% top 0;
   }
 }
@@ -18,7 +20,7 @@
     top: 8px !important;
   }
 
-  .type-select-btn{
+  .type-select-btn {
     color: $gray-300;
     border-bottom: 3px solid transparent;
     &:hover,
@@ -43,10 +45,6 @@
   }
 }
 //  保母服務 / Joy
-
-body {
-  overflow-x: hidden;
-}
 
 .index-service {
   &-content {
@@ -80,7 +78,13 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    @include media-breakpoint-up(md) {
+    //make mobile width 300px
+    img {
+      width: 300px;
+      max-width: 100%;
+      @include media-breakpoint-up(md) {
+        width: 100%;
+      }
     }
   }
 
@@ -103,14 +107,6 @@ body {
     p {
       color: $gray-300;
     }
-  }
-}
-//make mobile width 300px
-.index-service-img img {
-  width: 300px;
-  max-width: 100%;
-  @include media-breakpoint-up(md) {
-    width: 100%;
   }
 }
 
@@ -274,6 +270,17 @@ body {
       background-repeat: no-repeat;
       background-position: right 2px bottom 0;
     }
+    .accordion-item {
+      background-color: transparent !important;
+    }
+    .accordion-button {
+      &:hover {
+        color: $primary !important;
+      }
+      &:not(.collapsed):hover {
+        color: $gray-200 !important;
+      }
+    }
   }
 
   &-content {
@@ -324,6 +331,21 @@ body {
   }
 }
 
-.accordion-item {
-  background-color: transparent !important;
+// fixed button
+
+.index-fixed-button {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  width: 72px;
+  height: 72px;
+  z-index: 1010;
+  text-shadow: 0px 0px 24px $light;
+  box-shadow: 0px 4px 80px 0px $primary;
+  @include media-breakpoint-up(md) {
+    right: 48px;
+    bottom: 48px;
+    width: 84px;
+    height: 84px;
+  }
 }

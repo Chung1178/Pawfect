@@ -1,5 +1,5 @@
 function getImageUrl(url) {
-  return new URL(url, import.meta.url).href;
+  return new URL(`/assets/${url}`, import.meta.url).href;
 }
 
 // 渲染保母列表資料
@@ -11,8 +11,8 @@ const sitterData = [
     address: '新莊區,新北市 (8.2km)',
     bookedNum: 6,
     price: 550,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-1.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-1.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-1.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-1.png'),
     intro: '目前到府服務經驗4年多，自己本身也有養狗養貓，愛動物的我，有空也會去外面餵浪...'
   },
   {
@@ -22,8 +22,8 @@ const sitterData = [
     address: '永和區,新北市 (2.4km)',
     bookedNum: 8,
     price: 300,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-2.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-2.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-2.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-2.png'),
     intro: '很愛狗的我把狗當孩子疼，家有大空間在家工作，狗狗寄宿照護最適合我這個人來擔任啦！...'
   },
   {
@@ -33,8 +33,8 @@ const sitterData = [
     address: '萬華區,台北市 (2.9km)',
     bookedNum: 6,
     price: 600,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-3.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-3.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-3.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-3.png'),
     intro: '從小我就很喜歡小動物，也養過很多種動物，如狗、貓、鳥、老鼠、兔子...，對於寵物都非常...'
   },
   {
@@ -44,8 +44,8 @@ const sitterData = [
     address: '信義區,台北市 (9.6km)',
     bookedNum: 3,
     price: 350,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-4.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-4.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-4.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-4.png'),
     intro: '來自獸醫師家庭，從小接觸各種動物，非常愛毛小孩，有老寵照顧經驗，家裡寵物都活超過一...'
   },
   {
@@ -55,8 +55,8 @@ const sitterData = [
     address: '中山區,台北市 (5.3km)',
     bookedNum: 12,
     price: 500,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-5.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-5.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-5.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-5.png'),
     intro: '我是1個很愛毛小孩的人平常我自己煮鮮食給她們吃散步養狗狗有16年，我目前有4隻狗狗（貴賓...'
   },
   {
@@ -66,8 +66,8 @@ const sitterData = [
     address: '土城區,新北市 (5.4km)',
     bookedNum: 18,
     price: 450,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-6.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-6.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-6.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-6.png'),
     intro: '我愛狗，欣賞狗狗優雅的氣質及獨有的個性。狗兒對於環境變化非常敏感，尤其主人不在身時...'
   },
   {
@@ -77,8 +77,8 @@ const sitterData = [
     address: '文山區,台北市 (6.5km)',
     bookedNum: 2,
     price: 250,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-7.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-7.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-7.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-7.png'),
     intro: '從小家人養狗狗和魚開啟了我喜歡寵物的人生，因為喜歡的太多了無法全養所以就藉由幫大家照...'
   },
   {
@@ -88,8 +88,8 @@ const sitterData = [
     address: '新莊區,新北市 (8.2km)',
     bookedNum: 4,
     price: 400,
-    imgUrlSm: getImageUrl('../images/search-page/pet-sitter/sm/sitter-8.png'),
-    imgUrlLg: getImageUrl('../images/search-page/pet-sitter/lg/sitter-8.png'),
+    imgUrlSm: getImageUrl('images/search-page/pet-sitter/sm/sitter-8.png'),
+    imgUrlLg: getImageUrl('images/search-page/pet-sitter/lg/sitter-8.png'),
     intro: '純飼料餵食, 乾淨空間, 全年無休 含電梯含冷氣費用，且鋪防滑溫暖木紋磁磚地板，友善老或胖狗...'
   },
 ]

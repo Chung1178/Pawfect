@@ -1,0 +1,70 @@
+.order-summary {
+    background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
+    
+    .modal-content{
+        max-width: 360px;
+    }
+    .container .card {
+        border-radius: 1.5rem; /* 24px */
+        background-color: $light;
+        border: none !important;
+        box-shadow: 0px 4px 40px 0px #F6844D1F;
+    }
+}
+
+.custom-title {
+    margin-bottom: 72px; /* 自訂標題底部間距 */
+}
+
+/* 手機端調整 */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px; /* 手機端卡片底部間距 */
+    }
+}
+
+/* 使用 Bootstrap 斷點系統進行調整 */
+/* 平板端調整（768px 到 992px） */
+@media (min-width: 768px) and (max-width: 992px) {
+    .card {
+        margin-bottom: 30px; /* 平板端卡片底部間距 */
+    }
+}
+
+/* 桌面端調整（大於992px） */
+@media (min-width: 992px) {
+    .card {
+        margin-bottom: 40px; /* 桌面端卡片底部間距 */
+    }
+}
+
+/* 付款表單 */ 
+.payment-type {
+    .payment-type-select{
+        label {
+            color:$gray-200;
+        }
+    } 
+
+    .payment-type-select:hover{
+        label {
+            color:$primary;
+        }
+        input {
+            border-color:$primary;
+        }
+    } 
+}
+
+.payment-type-content{
+    label {
+        color: $gray-500;
+    }
+    select, input {
+        background-color: $gray-1000;
+        border: none;
+    }
+    ::placeholder{
+        color: $gray-300;
+    }
+}

@@ -4,54 +4,950 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>汪喵幫幫忙</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- banner / Chung -->
+    <section class="bg-gradient-primary">
+      <div class="index-banner-bg">
+        <div class="container">
+          <div class="index-banner position-relative">
+            <div class="banner-title w-50 pt-18 pt-lg-27">
+              <h1 class="text-white fs-3 fs-lg-1 mb-4">最值得您<br/>信賴的<span class="d-lg-none"><br/></span>寵物保母</h1>
+              <p class="d-none d-lg-block text-white fs-7">我們用心為每一位毛孩提供無微不至的照顧服務，讓您的孩子在保母們的呵護下，感受到最真摯的關愛與溫暖</p>
+            </div>
+            <div class="position-absolute top-100 start-0 end-0 translate-middle-y px-3">
+              <div class="row justify-content-md-center">
+                <div class="col-lg-10">
+                  <div class="d-none d-md-block bg-light rounded-4 shadow-primary">
+                    <div class="py-4 px-6">
+                      <div class="row gx-4 align-items-end">
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">您的寵物</p>
+                          <div class="dropdown petNumDropdown">
+                            <a href="#" type="button"
+                              class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                                align-items-center"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside"
+                              aria-expanded="false">
+                              <div class="d-flex align-items-center" >
+                                <img src="../assets/images/search-page/Pet-icon.svg"
+                                  class="me-2"
+                                  alt="pet-icon">
+                                <p data-petNum-show>貓 / 狗</p>
+                              </div>
+                              <span class="material-symbols-outlined text-gray-500">
+                                keyboard_arrow_down
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu py-4 w-100">
+                              <li>
+                                <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                                  href="#">
+                                  <span>貓</span>
+                                  <div class="d-flex align-items-center">
+                                    <button type="button"
+                                      class="btn p-0">
+                                      <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                        data-count-btn="-"
+                                        data-pet-type="cat">
+                                      </i>
+                                    </button>
+                                    <p class="mx-3 text-gray-500" data-cat-num>0</p>
+                                    <button type="button"
+                                      class="btn p-0">
+                                      <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                       data-count-btn="+"
+                                       data-pet-type="cat">
+                                      </i>
+                                    </button>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                                  href="#">
+                                  <span>狗</span>
+                                  <div class="d-flex align-items-center">
+                                    <button type="button" class="btn p-0">
+                                      <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                        data-count-btn="-"
+                                        data-pet-type="dog">
+                                      </i>
+                                    </button>
+                                    <p class="mx-3 text-gray-500" data-dog-num>0</p>
+                                    <button type="button" class="btn p-0">
+                                      <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                        data-count-btn="+"
+                                        data-pet-type="dog">
+                                      </i>
+                                    </button>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">您的地區</p>
+                          <div class="dropdown">
+                            <a href="#" type="button"
+                              class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                                align-items-center"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <div class="d-flex align-items-center">
+                                <img src="../assets/images/search-page/map-icon.svg"
+                                  class="me-2"
+                                  alt="map-icon">     
+                                <p data-area-show>地區</p>
+                              </div>
+                              <span class="material-symbols-outlined text-gray-500">
+                                keyboard_arrow_down
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu py-4 w-100 city-select-container"
+                              data-city-select>
+                              <li>
+                                <a class="dropdown-item py-2 px-4 mb-2 bg-gray-1000-hover"
+                                  href="#">
+                                  新北市
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">照顧期間</p>
+                          <div class="position-relative">
+                            <input type="text"
+                              id="date-picker-desk"
+                              class="custom-dropdown-toggle border-0 w-100"
+                              readonly>
+                            <div class="d-flex align-items-center position-absolute top-50 start-0   translate-middle-y ps-4 pe-none" data-date-show>
+                              <img src="../assets/images/search-page/calender-icon.svg"
+                                class="me-2"
+                                alt="map-icon">
+                              日期
+                            </div>
+                            <span class="material-symbols-outlined text-gray-500 position-absolute top-50 end-0 translate-middle-y pe-4 pe-none">
+                              keyboard_arrow_down
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <a href="#" class="btn btn-primary d-block">
+                            搜尋保母
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-none p-3 rounded-4 bg-light d-flex align-items-center shadow-primary">
+                    <a href="#" class="custom-dropdown-toggle d-block me-3 flex-grow-1"
+                      data-bs-toggle="modal" data-bs-target="#sitter-search-modal">
+                      您的需求
+                    </a>
+                    <a href="#" class="btn btn-primary"
+                      data-bs-toggle="modal" data-bs-target="#sitter-search-modal">
+                      搜尋
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+          <div class="modal fade sitter-search-modal"
+          id="sitter-search-modal"
+          tabindex="-1"
+          aria-labelledby="sitter-search-modal"
+          aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body pb-0">
+              <div class="py-6 px-2 border-bottom border-gray-800">
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">您的寵物</p>
+                  <div class="dropdown petNumDropdown">
+                    <a href="#" type="button"
+                      class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                        align-items-center"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      <div class="d-flex align-items-center" >
+                        <img src="../assets/images/search-page/Pet-icon.svg"
+                          class="me-2"
+                          alt="pet-icon">
+                        <p data-petNum-show>貓 / 狗</p>
+                      </div>
+                      <span class="material-symbols-outlined text-gray-500">
+                        keyboard_arrow_down
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu py-4 w-100">
+                      <li>
+                        <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                          href="#">
+                          <span>貓</span>
+                          <div class="d-flex align-items-center">
+                            <button type="button"
+                              class="btn p-0">
+                              <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                data-count-btn="-"
+                                data-pet-type="cat">
+                              </i>
+                            </button>
+                            <p class="mx-3 text-gray-500" data-cat-num>0</p>
+                            <button type="button"
+                              class="btn p-0">
+                              <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                data-count-btn="+"
+                                data-pet-type="cat">
+                              </i>
+                            </button>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                          href="#">
+                          <span>狗</span>
+                          <div class="d-flex align-items-center">
+                            <button type="button" class="btn p-0">
+                              <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                data-count-btn="-"
+                                data-pet-type="dog">
+                              </i>
+                            </button>
+                            <p class="mx-3 text-gray-500" data-dog-num>0</p>
+                            <button type="button" class="btn p-0">
+                              <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                data-count-btn="+"
+                                data-pet-type="dog">
+                              </i>
+                            </button>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">您的地區</p>
+                  <div class="dropdown">
+                    <a href="#" type="button"
+                      class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                        align-items-center"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <div class="d-flex align-items-center">
+                        <img src="../assets/images/search-page/map-icon.svg"
+                          class="me-2"
+                          alt="map-icon">     
+                        <p data-area-show>地區</p>
+                      </div>
+                      <span class="material-symbols-outlined text-gray-500">
+                        keyboard_arrow_down
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu py-4 w-100 city-select-container"
+                      data-city-select>
+                      <li>
+                        <a class="dropdown-item py-2 px-4 mb-2 bg-gray-1000-hover"
+                          href="#">
+                          新北市
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">照顧期間</p>
+                  <div class="position-relative">
+                    <input type="text"
+                      id="date-picker-phone"
+                      class="custom-dropdown-toggle border-0 w-100"
+                      readonly>
+                    <div class="d-flex align-items-center position-absolute top-50 start-0 translate-middle-y
+                      ps-4 pe-none" data-date-show>
+                      <img src="../assets/images/search-page/calender-icon.svg"
+                        class="me-2"
+                        alt="map-icon">
+                      日期
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500 position-absolute top-50 end-0 translate-middle-y pe-4 pe-none">
+                      keyboard_arrow_down
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 d-flex">
+              <button type="button" class="btn btn-outline-primary w-100 me-3"
+                data-bs-dismiss="modal">
+                取消
+              </button>
+              <a href="search.html"
+                data-bs-dismiss="modal"
+                class="btn btn-primary w-100">
+                搜尋
+              </a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 保母服務 / Joy -->
+    <section class="index-service-content">
+      <h2 class="fs-5 fs-md-3 d-md-block d-none d-flex">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="pe-6 fs-6">\</span>
+          <span class="text-center fw-bold">最 Pawfect 的寵物保母服務</span>
+          <span class="ps-6 fs-6">/</span>
+        </div>
+      </h2>
+
+      <h2
+        class="fs-5 fs-md-3 d-md-none d-block d-flex align-items-center justify-content-center"
+      >
+        <span class="pe-4 fs-6">\</span>
+        <div class="text-center">
+          <span class="d-block fw-bold">最 Pawfect 的</span>
+          <span class="d-block fw-bold">寵物保母服務</span>
+        </div>
+        <span class="ps-4 fs-6">/</span>
+      </h2>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <!--1-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around">
+              <div class="col-md-5 justify-content-md-start index-service-img">
+                <img src="/assets/images/外宿寄養.svg" alt="外宿寄養照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>外宿寄養</h3>
+                  <p>
+                    不習慣寵物旅館？選擇將寵物外宿寄養，讓專業保母在家中照顧您的毛孩，全心陪伴和照料確保毛孩在您外出時依然舒適安全。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--2-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around flex-md-row-reverse">
+              <div class="col-md-5 justify-content-md-end index-service-img">
+                <img src="/assets/images/遛狗散步.svg" alt="遛狗散步照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>遛狗散步</h3>
+                  <p>
+                    忙碌到沒時間遛狗？我們的專業保母會帶您的愛犬出門散步，釋放精力並保持健康，為它們提供快樂的戶外時光。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--3-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around">
+              <div class="col-md-5 justify-content-md-start index-service-img">
+                <img src="/assets/images/日間托養.svg" alt="日間托養照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>日間托養</h3>
+                  <p>
+                    白天上班沒人陪伴寵物？選擇我們的日間托養服務，保證您的毛孩在安全舒適的環境中獲得全方位的照顧和玩樂。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--4-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around flex-md-row-reverse">
+              <div class="col-md-5 justify-content-md-end index-service-img">
+                <img src="/assets/images/上門餵食.svg" alt="上門餵食照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>上門餵食</h3>
+                  <p>
+                    出差旅行無法餵養毛孩？我們提供上門餵食服務，依照指示，準時為寵物餵食、陪伴、玩耍、運動，並進行基本清潔，讓您安心。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 毛孩爸媽怎麼說 / Tim -->
+    <section class="bg-gradient-secondary">
+      <div class="index-comment py-12 pt-lg-25 pb-lg-30">
+        <div
+          class="container text-light d-md-flex justify-content-md-between align-items-md-center mb-8 mb-lg-18"
+        >
+          <div class="mb-4 mb-md-0">
+            <h2 class="fs-5 fs-lg-3 mb-1 mb-lg-2">毛孩爸媽怎麼說？</h2>
+            <p class="fs-lg-7">
+              透明且真實的用戶評論和推薦，讓您能安心參考並做出明智的選擇
+            </p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div
+              class="swiper-button-custom swiper-button-comment-pre me-4 me-lg-8"
+            >
+              <i class="bi bi-arrow-left-short fs-4"></i>
+            </div>
+            <div class="swiper-button-custom swiper-button-comment-next">
+              <i class="bi bi-arrow-right-short fs-4"></i>
+            </div>
+          </div>
+        </div>
+        <div class="ps-3 ps-md-0">
+          <div class="swiper swiper-comment">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Chung</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心回報貓貓的狀況，需要幫忙注意的地方也都有記得，真的在連假期間幫助很多～
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-1.png" alt="user-1" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Tim</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      很細心的保母，不定時也會回報小寶貝的照片，讓人很放心。小寶貝接回家後還會想念保母，一直在家裡找來找去～
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-2.png" alt="user-2" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Grace</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心觀察及回報寵物狀況，除了餵食陪玩之外、還幫忙清理貓砂，真心感謝及推薦。
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-3.png" alt="user-3" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Joy</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      保母有一隻很親人很親狗的紅貴賓,保母也照顧的很細心，推推推！
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-4.png" alt="user-4" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Chung</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心回報貓貓的狀況，需要幫忙注意的地方也都有記得，真的在連假期間幫助很多～
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-1.png" alt="user-1" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Tim</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      很細心的保母，不定時也會回報小寶貝的照片，讓人很放心。小寶貝接回家後還會想念保母，一直在家裡找來找去～
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-2.png" alt="user-2" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Grace</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心觀察及回報寵物狀況，除了餵食陪玩之外、還幫忙清理貓砂，真心感謝及推薦。
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-3.png" alt="user-3" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 mb-9 pt-4 px-4 pt-lg-8 px-lg-8"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Joy</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      保母有一隻很親人很親狗的紅貴賓,保母也照顧的很細心，推推推！
+                    </p>
+                    <img
+                      src="../assets/images/home-comment-div.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="../assets/images/user-4.png" alt="user-4" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 預定體驗 / Grace -->
+<!-- 大標題區 -->
+<div class="order-process">
+  <section class="index-order-container pt-12 pb-14 pt-lg-30 pb-lg-40">
+    <!-- 桌面版大標題 -->
+    <h2 class="pawfect-title fs-5 fs-md-3 d-md-flex d-none align-items-center justify-content-center text-primary">
+      <span class="pe-6 fs-6">\</span>
+      <span class="text-center fw-bold">最 Pawfect 的寵物保母服務</span>
+      <span class="ps-6 fs-6">/</span>
+    </h2>
+
+    <!-- 手機版大標題 -->
+    <h2 class="pawfect-title fs-5 fs-md-3 d-md-none d-flex align-items-center justify-content-center text-primary">
+      <span class="pe-4 fs-6">\</span>
+      <div class="text-center">
+        <span class="d-block fw-bold">最 Pawfect 的</span>
+        <span class="d-block fw-bold">寵物保母服務</span>
+      </div>
+      <span class="ps-4 fs-6">/</span>
+    </h2>
+
+    <!-- 副標題 -->
+    <h5 class="pawfect-subtitle text-center">預定流程直覺好上手</h5>
+
+    <!-- 三欄式卡片區 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <!-- 第一張卡片 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="d-flex flex-md-column align-items-center justify-content-between mb-md-3">
+            <p class="card-order text-primary text-center mb-md-4">01</p>
+            <div class="card-icon">
+              <img src="../assets/images/choice icon.png" class="card-img-top img-fluid" alt="Choice Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-md-center">
+            <h4 class="card-title fs-md-6 fs-7">選擇理想保母</h4>
+            <p class="card-text">
+              點選您的地址和日期，我們將根據您寵物照護需求，精選出最適合您寵物的專業保母。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 裝飾性圖標 -->
+      <div class="col-md-auto d-none d-md-flex justify-content-center align-items-center">
+        <img src="../assets/images/dogPrint.png" alt="裝飾性圖標" class="decorative-icon-1">
+      </div>
+     <!-- 手機板裝飾性圖標 -->
+     <div class="col-md-auto d-flex d-md-none justify-content-center align-items-center">
+      <img src="../assets/images/dogPrint.png" alt="裝飾性圖標" class="decorative-icon-2">
+    </div>      
+
+      <!-- 第二張卡片 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="d-flex flex-md-column align-items-center justify-content-between mb-md-3">
+            <p class="card-order text-secondary-100 text-center mb-md-4">02</p>
+            <div class="card-icon">
+              <img src="../assets/images/reserve icon.png" class="card-img-top img-fluid" alt="Reserve Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-md-center">
+            <h4 class="card-title fs-md-6 fs-7">快速預約</h4>
+            <p class="card-text">
+              使用網站快速選擇服務時間並完成安全預約，透明定價，無隱藏費用，讓您預訂無憂。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 裝飾性圖標 -->
+      <div class="col-md-auto d-none d-md-flex justify-content-center align-items-center">
+        <img src="../assets/images/dogPrint2.png" alt="裝飾性圖標" class="decorative-icon-1">
+      </div>
+      <!-- 手機板裝飾性圖標 -->
+      <div class="col-md-auto d-flex d-md-none justify-content-center align-items-center">
+        <img src="../assets/images/dogPrint2.png" alt="裝飾性圖標" class="decorative-icon-2">
+      </div>      
+
+      <!-- 第三張卡片 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="d-flex flex-md-column align-items-center justify-content-between mb-md-3">
+            <p class="card-order text-thirdly-100 text-center mb-md-4">03</p>
+            <div class="card-icon">
+              <img src="../assets/images/pay icon.png" class="card-img-top img-fluid" alt="Pay Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-md-center">
+            <h4 class="card-title fs-md-6 fs-7">確認與付款</h4>
+            <p class="card-text">
+              完成支付後，隨時接收寵物更新。我們的客服隨時待命，確保您的寵物得到最佳照顧。
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </section>
+</div>
+    <!-- 常見問題 / Joy -->
+    <section class="index-qna-cat-deco" id="index-qna">
+      <div class="container index-qna-content">
+        <div class="row justify-content-center">
+          <div class="col col-md-8 text-center">
+            <div class="index-qna-title-container">
+              <h2>常見問題</h2>
+            </div>
 
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    預定寵物保母費用?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="text-start list-unstyled">
+                      <li>
+                        安親寄宿:媒合費用$ 300/12H 起,會依據毛小孩體型調整。
+                      </li>
+                      <li>
+                        到府保母:$ 300/次起,單次半小時。超過半小時需加購。
+                        遛狗服務:$
+                      </li>
+                      <li>
+                        200/次起,單次半小時。超過半小時需加購。 到府洗澡:$
+                      </li>
+                      <li class="mb-5">
+                        450/次起,費用會依據毛小孩種類與體型有所調整。
+                      </li>
+                      <li>
+                        *所有服務費用皆含「寵物保險」及「服務品質保障」,服務不滿意全額退款。
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    寵物保母服務包括哪些內容?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    我們的寵物保母服務包括餵食、散步、洗澡、遊戲和陪伴等。根據您的需求，我們也可以提供特定的服務，如藥物管理和訓練。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    如何預訂寵物保母服務?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    您可以通過我們的網站在線預訂,選擇合適的日期和時間,並提供您的寵物資料。我們會根據您的需求挑選合適的保母,供您選擇並預訂。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    如果我的寵物有特殊需求怎麼辦?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    在預訂時,請詳細告知我們您的寵物有何特殊需求,我們會根據需求選擇最合適的保母,確保您的寵物得到專業的照顧。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    那些地區有提供寵物保母服務?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    全台各地皆有寵物保母服務。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSix"
+                  >
+                    我可以隨時和寵物保母聯絡,了解寵物情形嗎?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseSix"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    是的,您可以通過我們的網站或
+                    App與保母進行溝通,了解您的寵物狀況。我們也會提供定期更新和照片,讓您隨時了解寵物的情況。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
 
+    <a href="#" class="index-fixed-button bg-primary border border-light rounded-circle
+      d-flex justify-content-center align-items-center text-light fs-11 fs-md-10">
+      立即預約<br>完美保母
+    </a>
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/home.js"></script>
   </body>
 </html>

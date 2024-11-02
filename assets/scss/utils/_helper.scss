@@ -1,0 +1,70 @@
+.bg-gradient-primary {
+    background: linear-gradient(123.31deg, #f6844d 0%, #ffab82 100%);
+  }
+  .bg-gradient-secondary {
+    background: linear-gradient(123.31deg, #a9bd7e 0%, #c7d6a5 100%);
+  }
+  
+  .bg-gradient-thirdly {
+    background: linear-gradient(123.31deg, #86a9c2 0%, #adc9db 100%);
+  }
+  
+  .bg-gradient-primary-banner {
+    background: linear-gradient(90deg, #FFAB82 0%, #F6844D 50%, #FFAB82 100%);
+  }
+
+  .bg-gradient-light {
+    background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
+  }
+
+  .shadow-primary {
+    box-shadow: 0px 4px 80px 0px #F6844D66;
+  }
+  
+  @include media-breakpoint-up(md) {   
+    .dog-foot-title-md {
+      position: relative;
+      &::after {
+        position: absolute;
+        left: -55px;
+        top: -50%;
+        content: '';
+        width: 74px;
+        height: 60px;
+        background-image: url('../images/dog-foot.svg');
+      }
+    }
+  }
+
+  .w-fit-content {
+    width: fit-content;
+  }
+
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  
+  .icon-unfilled {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.spinner-bg {
+  background-color: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(2px);
+  z-index: 1030;
+  @include media-breakpoint-up(md) {
+    .spinner-border {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.card-comment {
+  &-corner {
+    position: absolute;
+    left: 2rem;
+    bottom: -1rem;
+  }
+}
+
+.card-sitter {
+  &__img {
+    height: 198px;
+    @include media-breakpoint-up(lg) {
+      height: 172px;
+    }
+  }
+}

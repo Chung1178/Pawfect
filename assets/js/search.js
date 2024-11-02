@@ -110,20 +110,20 @@ function renderSitterList() {
           <h3 class="fs-7 text-gray-200 mb-2">${sitter.title}</h3>
           <div class="d-flex align-items-center mb-1 mb-md-2">
             <div class="d-flex align-items-center me-1">
-              <img src="../assets/images/search-page/star-primary.svg"
+              <img src="${getImageUrl('images/search-page/star-primary.svg')}"
                 alt="icon-star"
                 class="me-1">
               <span class="fs-10 text-primary fw-bold me-1">${sitter.rate}</span>
               <span class="fs-10 text-gray-500">(${sitter.commentNum})</span>
             </div>
             <div class="d-flex align-items-center me-1">
-              <img src="../assets/images/search-page/map-primary.svg"
+              <img src="${getImageUrl('images/search-page/map-primary.svg')}"
                 alt="icon-map"
                 class="me-1">
               <p class="fs-10 text-gray-500">${sitter.address}</p>
             </div>
             <div class="d-flex align-items-center">
-              <img src="../assets/images/search-page/member-primary.svg"
+              <img src="${getImageUrl('images/search-page/member-primary.svg')}"
                 alt="icon-map"
                 class="me-1">
               <span class="fs-10 text-gray-500">${sitter.bookedNum}</span>

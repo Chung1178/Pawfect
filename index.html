@@ -4,57 +4,1085 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/Pawfect/assets/main-8fb2a326.js"></script>
-    <link rel="stylesheet" href="/Pawfect/assets/main-e523073d.css">
+    <title>汪喵幫幫忙</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <script type="module" crossorigin src="/Pawfect/assets/air-datepicker-9a8d606c.js"></script>
+    <script type="module" crossorigin src="/Pawfect/assets/home-d7fd7568.js"></script>
+    <link rel="stylesheet" href="/Pawfect/assets/air-datepicker-b5095b77.css">
+    <link rel="stylesheet" href="/Pawfect/assets/home-f113beea.css">
   </head>
   <body>
-    <h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="/Pawfect/assets/cat-0c0689ae.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
+    <!-- Chung -->
+<nav class="navbar sticky-top bg-light navbar-expand-lg py-lg-4 py-3" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><picture>
+            <source srcset="/Pawfect/assets/layout-header-logo-550bb4f3.png "
+                    media="(min-width: 796px)">
+            <img src="data:image/png;base64,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">
+          </picture>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header header-nav-bg-color p-3">
+                <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="logo"></a>
+                <button type="button" class="ms-auto btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-3 px-lg-0 header-nav-bg-color">
+                <ul class="navbar-nav flex-grow-1 mb-12 mb-lg-0">
+                    <li class="nav-item my-8 my-lg-0 mx-lg-11">
+                    <a class="nav-link link-gray-100" href="search.html">搜尋保母</a>
+                    </li>
+                    <li class="nav-item mb-8 mb-lg-0 me-lg-11">
+                    <a class="nav-link link-gray-100" href="#">成為保母</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link link-gray-100" href="#index-qna">常見問題</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column-reverse h-100 flex-lg-row align-items-center">
+                    <img class="d-lg-none d-block mt-auto" src="/Pawfect/assets/layout-header-woman-c4590fd5.png" alt="woman">
+                    <a class="d-lg-none btn btn-outline-primary w-100" href="#">登入</a>
+                    <a class="d-none d-lg-block flex-shrink-0 me-6" href="#">登入</a>
+                    <a class="btn btn-primary w-100 w-lg-auto text-white mb-3 mb-lg-0">註冊</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</nav>
+    <!-- banner / Chung -->
+    <section class="bg-gradient-primary">
+      <div class="index-banner-bg">
+        <div class="container">
+          <div class="index-banner position-relative">
+            <div class="banner-title w-50 pt-18 pt-lg-27">
+              <h1 class="text-white fs-3 fs-lg-1 mb-4">最值得您<br/>信賴的<span class="d-lg-none"><br/></span>寵物保母</h1>
+              <p class="d-none d-lg-block text-white fs-7">我們用心為每一位毛孩提供無微不至的照顧服務，讓您的孩子在保母們的呵護下，感受到最真摯的關愛與溫暖</p>
+            </div>
+            <div class="position-absolute top-100 start-0 end-0 translate-middle-y px-3">
+              <div class="row justify-content-md-center">
+                <div class="col-lg-10">
+                  <div class="d-none d-md-block bg-light rounded-4 shadow-primary">
+                    <div class="py-4 px-6">
+                      <div class="row gx-4 align-items-end">
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">您的寵物</p>
+                          <div class="dropdown petNumDropdown">
+                            <a href="#" type="button"
+                              class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                                align-items-center"
+                              data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside"
+                              aria-expanded="false">
+                              <div class="d-flex align-items-center" >
+                                <img src="/Pawfect/assets/Pet-icon-c16840aa.svg"
+                                  class="me-2"
+                                  alt="pet-icon">
+                                <p data-petNum-show>貓 / 狗</p>
+                              </div>
+                              <span class="material-symbols-outlined text-gray-500">
+                                keyboard_arrow_down
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu py-4 w-100">
+                              <li>
+                                <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                                  href="#">
+                                  <span>貓</span>
+                                  <div class="d-flex align-items-center">
+                                    <button type="button"
+                                      class="btn p-0">
+                                      <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                        data-count-btn="-"
+                                        data-pet-type="cat">
+                                      </i>
+                                    </button>
+                                    <p class="mx-3 text-gray-500" data-cat-num>0</p>
+                                    <button type="button"
+                                      class="btn p-0">
+                                      <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                       data-count-btn="+"
+                                       data-pet-type="cat">
+                                      </i>
+                                    </button>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                                  href="#">
+                                  <span>狗</span>
+                                  <div class="d-flex align-items-center">
+                                    <button type="button" class="btn p-0">
+                                      <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                        data-count-btn="-"
+                                        data-pet-type="dog">
+                                      </i>
+                                    </button>
+                                    <p class="mx-3 text-gray-500" data-dog-num>0</p>
+                                    <button type="button" class="btn p-0">
+                                      <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                        data-count-btn="+"
+                                        data-pet-type="dog">
+                                      </i>
+                                    </button>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">您的地區</p>
+                          <div class="dropdown">
+                            <a href="#" type="button"
+                              class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                                align-items-center"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <div class="d-flex align-items-center">
+                                <img src="/Pawfect/assets/map-icon-93f40d7b.svg"
+                                  class="me-2"
+                                  alt="map-icon">     
+                                <p data-area-show>地區</p>
+                              </div>
+                              <span class="material-symbols-outlined text-gray-500">
+                                keyboard_arrow_down
+                              </span>
+                            </a>
+                            <ul class="dropdown-menu py-4 w-100 city-select-container"
+                              data-city-select>
+                              <li>
+                                <a class="dropdown-item py-2 px-4 mb-2 bg-gray-1000-hover"
+                                  href="#">
+                                  新北市
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <p class="gray-500 mb-2">照顧期間</p>
+                          <div class="position-relative">
+                            <input type="text"
+                              id="date-picker-desk"
+                              class="custom-dropdown-toggle border-0 w-100"
+                              readonly>
+                            <div class="d-flex align-items-center position-absolute top-50 start-0   translate-middle-y ps-4 pe-none" data-date-show>
+                              <img src="/Pawfect/assets/calender-icon-b5f4cd11.svg"
+                                class="me-2"
+                                alt="map-icon">
+                              日期
+                            </div>
+                            <span class="material-symbols-outlined text-gray-500 position-absolute top-50 end-0 translate-middle-y pe-4 pe-none">
+                              keyboard_arrow_down
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <a href="#" class="btn btn-primary d-block">
+                            搜尋保母
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-none p-3 rounded-4 bg-light d-flex align-items-center shadow-primary">
+                    <a href="#" class="custom-dropdown-toggle d-block me-3 flex-grow-1"
+                      data-bs-toggle="modal" data-bs-target="#sitter-search-modal">
+                      您的需求
+                    </a>
+                    <a href="#" class="btn btn-primary"
+                      data-bs-toggle="modal" data-bs-target="#sitter-search-modal">
+                      搜尋
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+          <div class="modal fade sitter-search-modal"
+          id="sitter-search-modal"
+          tabindex="-1"
+          aria-labelledby="sitter-search-modal"
+          aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body pb-0">
+              <div class="py-6 px-2 border-bottom border-gray-800">
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">您的寵物</p>
+                  <div class="dropdown petNumDropdown">
+                    <a href="#" type="button"
+                      class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                        align-items-center"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      <div class="d-flex align-items-center" >
+                        <img src="/Pawfect/assets/Pet-icon-c16840aa.svg"
+                          class="me-2"
+                          alt="pet-icon">
+                        <p data-petNum-show>貓 / 狗</p>
+                      </div>
+                      <span class="material-symbols-outlined text-gray-500">
+                        keyboard_arrow_down
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu py-4 w-100">
+                      <li>
+                        <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                          href="#">
+                          <span>貓</span>
+                          <div class="d-flex align-items-center">
+                            <button type="button"
+                              class="btn p-0">
+                              <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                data-count-btn="-"
+                                data-pet-type="cat">
+                              </i>
+                            </button>
+                            <p class="mx-3 text-gray-500" data-cat-num>0</p>
+                            <button type="button"
+                              class="btn p-0">
+                              <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                data-count-btn="+"
+                                data-pet-type="cat">
+                              </i>
+                            </button>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-block py-2 px-4 mb-2 bg-gray-1000-hover d-flex justify-content-between align-items-center"
+                          href="#">
+                          <span>狗</span>
+                          <div class="d-flex align-items-center">
+                            <button type="button" class="btn p-0">
+                              <i class="bi bi-dash-circle fs-6 text-gray-800 pe-none"
+                                data-count-btn="-"
+                                data-pet-type="dog">
+                              </i>
+                            </button>
+                            <p class="mx-3 text-gray-500" data-dog-num>0</p>
+                            <button type="button" class="btn p-0">
+                              <i class="bi bi-plus-circle fs-6 text-gray-500"
+                                data-count-btn="+"
+                                data-pet-type="dog">
+                              </i>
+                            </button>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">您的地區</p>
+                  <div class="dropdown">
+                    <a href="#" type="button"
+                      class="custom-dropdown-toggle w-100 d-flex justify-content-between
+                        align-items-center"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <div class="d-flex align-items-center">
+                        <img src="/Pawfect/assets/map-icon-93f40d7b.svg"
+                          class="me-2"
+                          alt="map-icon">     
+                        <p data-area-show>地區</p>
+                      </div>
+                      <span class="material-symbols-outlined text-gray-500">
+                        keyboard_arrow_down
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu py-4 w-100 city-select-container"
+                      data-city-select>
+                      <li>
+                        <a class="dropdown-item py-2 px-4 mb-2 bg-gray-1000-hover"
+                          href="#">
+                          新北市
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <p class="gray-500 mb-2">照顧期間</p>
+                  <div class="position-relative">
+                    <input type="text"
+                      id="date-picker-phone"
+                      class="custom-dropdown-toggle border-0 w-100"
+                      readonly>
+                    <div class="d-flex align-items-center position-absolute top-50 start-0 translate-middle-y
+                      ps-4 pe-none" data-date-show>
+                      <img src="/Pawfect/assets/calender-icon-b5f4cd11.svg"
+                        class="me-2"
+                        alt="map-icon">
+                      日期
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500 position-absolute top-50 end-0 translate-middle-y pe-4 pe-none">
+                      keyboard_arrow_down
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 d-flex">
+              <button type="button" class="btn btn-outline-primary w-100 me-3"
+                data-bs-dismiss="modal">
+                取消
+              </button>
+              <a href="search.html"
+                data-bs-dismiss="modal"
+                class="btn btn-primary w-100">
+                搜尋
+              </a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 保母服務 / Joy -->
+    <section class="index-service-content">
+      <h2 class="fs-5 fs-md-3 d-md-block d-none d-flex">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="pe-6 fs-6">\</span>
+          <span class="text-center fw-bold">最 Pawfect 的寵物保母服務</span>
+          <span class="ps-6 fs-6">/</span>
+        </div>
+      </h2>
+
+      <h2
+        class="fs-5 fs-md-3 d-md-none d-block d-flex align-items-center justify-content-center"
+      >
+        <span class="pe-4 fs-6">\</span>
+        <div class="text-center">
+          <span class="d-block fw-bold">最 Pawfect 的</span>
+          <span class="d-block fw-bold">寵物保母服務</span>
+        </div>
+        <span class="ps-4 fs-6">/</span>
+      </h2>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <!--1-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around">
+              <div class="col-md-5 justify-content-md-start index-service-img">
+                <img src="/Pawfect/assets/外宿寄養-7ce70dd2.svg" alt="外宿寄養照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>外宿寄養</h3>
+                  <p>
+                    不習慣寵物旅館？選擇將寵物外宿寄養，讓專業保母在家中照顧您的毛孩，全心陪伴和照料確保毛孩在您外出時依然舒適安全。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--2-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around flex-md-row-reverse">
+              <div class="col-md-5 justify-content-md-end index-service-img">
+                <img src="/Pawfect/assets/遛狗散步-c141c7d6.svg" alt="遛狗散步照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>遛狗散步</h3>
+                  <p>
+                    忙碌到沒時間遛狗？我們的專業保母會帶您的愛犬出門散步，釋放精力並保持健康，為它們提供快樂的戶外時光。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--3-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around">
+              <div class="col-md-5 justify-content-md-start index-service-img">
+                <img src="/Pawfect/assets/日間托養-88634396.svg" alt="日間托養照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>日間托養</h3>
+                  <p>
+                    白天上班沒人陪伴寵物？選擇我們的日間托養服務，保證您的毛孩在安全舒適的環境中獲得全方位的照顧和玩樂。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--4-->
+          <div class="col-md-10 index-service-list">
+            <div class="row justify-content-md-around flex-md-row-reverse">
+              <div class="col-md-5 justify-content-md-end index-service-img">
+                <img src="/Pawfect/assets/上門餵食-57f9897a.svg" alt="上門餵食照片" />
+              </div>
+              <div class="col-md-5 index-service-lead">
+                <div>
+                  <h3>上門餵食</h3>
+                  <p>
+                    出差旅行無法餵養毛孩？我們提供上門餵食服務，依照指示，準時為寵物餵食、陪伴、玩耍、運動，並進行基本清潔，讓您安心。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 毛孩爸媽怎麼說 / Tim -->
+    <section class="bg-gradient-secondary">
+      <div class="index-comment py-12 pt-lg-25 pb-lg-30">
+        <div
+          class="container text-light d-md-flex justify-content-md-between align-items-md-center mb-8 mb-lg-18"
+        >
+          <div class="mb-4 mb-md-0">
+            <h2 class="fs-5 fs-lg-3 mb-1 mb-lg-2">毛孩爸媽怎麼說？</h2>
+            <p class="fs-lg-7">
+              透明且真實的用戶評論和推薦，讓您能安心參考並做出明智的選擇
+            </p>
+          </div>
+          <div class="d-flex align-items-center">
+            <div
+              class="swiper-button-custom swiper-button-comment-pre me-4 me-lg-8"
+            >
+              <i class="bi bi-arrow-left-short fs-4"></i>
+            </div>
+            <div class="swiper-button-custom swiper-button-comment-next">
+              <i class="bi bi-arrow-right-short fs-4"></i>
+            </div>
+          </div>
+        </div>
+        <div class="ps-3 ps-md-0">
+          <div class="swiper swiper-comment">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Chung</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心回報貓貓的狀況，需要幫忙注意的地方也都有記得，真的在連假期間幫助很多～
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-1-f9d86063.png" alt="user-1" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Tim</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      很細心的保母，不定時也會回報小寶貝的照片，讓人很放心。小寶貝接回家後還會想念保母，一直在家裡找來找去～
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-2-8c5a3ef8.png" alt="user-2" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Grace</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心觀察及回報寵物狀況，除了餵食陪玩之外、還幫忙清理貓砂，真心感謝及推薦。
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-3-985e9149.png" alt="user-3" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Joy</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      保母有一隻很親人很親狗的紅貴賓,保母也照顧的很細心，推推推！
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-4-65c6d36e.png" alt="user-4" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Chung</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心回報貓貓的狀況，需要幫忙注意的地方也都有記得，真的在連假期間幫助很多～
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-1-f9d86063.png" alt="user-1" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Tim</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      很細心的保母，不定時也會回報小寶貝的照片，讓人很放心。小寶貝接回家後還會想念保母，一直在家裡找來找去～
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-2-8c5a3ef8.png" alt="user-2" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 pt-4 px-4 pt-lg-8 px-lg-8 mb-9"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Grace</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      細心觀察及回報寵物狀況，除了餵食陪玩之外、還幫忙清理貓砂，真心感謝及推薦。
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-3-985e9149.png" alt="user-3" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-comment">
+                  <div
+                    class="card-comment-body position-relative bg-light rounded-4 mb-9 pt-4 px-4 pt-lg-8 px-lg-8"
+                  >
+                    <div class="d-flex justify-content-between mb-2 mb-lg-4">
+                      <h3 class="fs-7 text-dark">Joy</h3>
+                      <div class="d-flex align-items-center text-primary fs-7">
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill text-gray-800"></i>
+                      </div>
+                    </div>
+                    <p data-user-comment>
+                      保母有一隻很親人很親狗的紅貴賓,保母也照顧的很細心，推推推！
+                    </p>
+                    <img
+                      src="/Pawfect/assets/home-comment-div-eb8e0ccf.svg"
+                      alt="home-comment-div"
+                      class="card-comment-corner"
+                    />
+                  </div>
+                  <div class="card-comment-image">
+                    <img src="/Pawfect/assets/user-4-65c6d36e.png" alt="user-4" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 預定體驗 / Grace -->
+<!-- 大標題區 -->
+<div class="order-process">
+  <section class="index-order-container pt-12 pb-14 pt-lg-30 pb-lg-40">
+    <!-- 桌面版大標題 -->
+    <h2 class="pawfect-title fs-5 fs-md-3 d-md-flex d-none align-items-center justify-content-center text-primary">
+      <span class="pe-6 fs-6">\</span>
+      <span class="text-center fw-bold">最 Pawfect 的寵物保母服務</span>
+      <span class="ps-6 fs-6">/</span>
+    </h2>
+
+    <!-- 手機版大標題 -->
+    <h2 class="pawfect-title fs-5 fs-md-3 d-md-none d-flex align-items-center justify-content-center text-primary">
+      <span class="pe-4 fs-6">\</span>
+      <div class="text-center">
+        <span class="d-block fw-bold">最 Pawfect 的</span>
+        <span class="d-block fw-bold">寵物保母服務</span>
+      </div>
+      <span class="ps-4 fs-6">/</span>
+    </h2>
+
+    <!-- 副標題 -->
+    <h5 class="pawfect-subtitle text-center">預定流程直覺好上手</h5>
+
+    <!-- 三欄式卡片區 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <!-- 第一張卡片 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="d-flex flex-md-column align-items-center justify-content-between mb-md-3">
+            <p class="card-order text-primary text-center mb-md-4">01</p>
+            <div class="card-icon">
+              <img src="data:image/png;base64,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" class="card-img-top img-fluid" alt="Choice Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-md-center">
+            <h4 class="card-title fs-md-6 fs-7">選擇理想保母</h4>
+            <p class="card-text">
+              點選您的地址和日期，我們將根據您寵物照護需求，精選出最適合您寵物的專業保母。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 裝飾性圖標 -->
+      <div class="col-md-auto d-none d-md-flex justify-content-center align-items-center">
+        <img src="data:image/png;base64,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" alt="裝飾性圖標" class="decorative-icon-1">
+      </div>
+     <!-- 手機板裝飾性圖標 -->
+     <div class="col-md-auto d-flex d-md-none justify-content-center align-items-center">
+      <img src="data:image/png;base64,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" alt="裝飾性圖標" class="decorative-icon-2">
+    </div>      
+
+      <!-- 第二張卡片 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="d-flex flex-md-column align-items-center justify-content-between mb-md-3">
+            <p class="card-order text-secondary-100 text-center mb-md-4">02</p>
+            <div class="card-icon">
+              <img src="/Pawfect/assets/reserve icon-b7fe57fb.png" class="card-img-top img-fluid" alt="Reserve Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-md-center">
+            <h4 class="card-title fs-md-6 fs-7">快速預約</h4>
+            <p class="card-text">
+              使用網站快速選擇服務時間並完成安全預約，透明定價，無隱藏費用，讓您預訂無憂。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 裝飾性圖標 -->
+      <div class="col-md-auto d-none d-md-flex justify-content-center align-items-center">
+        <img src="data:image/png;base64,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" alt="裝飾性圖標" class="decorative-icon-1">
+      </div>
+      <!-- 手機板裝飾性圖標 -->
+      <div class="col-md-auto d-flex d-md-none justify-content-center align-items-center">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABtCAYAAAALZ4e4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAh7SURBVHgB7V1bUttIFL3dogrIT5wVRFlB4GeqIB9jVpBkARPbKwhZAWYFwApszyxgnBXgVE2gZn6AFeCsIM5PoELcPbdvS7Zsy3a31C5ajk4V4IckysfdfZ99xGBFkFetCtzDDoggpBf4sA9bcM12GwMoMBisAPKi8x4kNPHqlam3+sB4m+39cQwFhXPC5OWfLZCyvvAgxpC0dw0oIDg4hLzsHC0liw6UdXnZqkIB4YwwJCCkaWgMVoMCwt0IE1C1ORwkewEFxMb0C2Td7ngN15mdxKs92BIfl1i4EH4BTBBG1u17ZN2kTL5VRxL7uEY12V6tA25wDQXEaErSgg1wmuIKxFBrVFtZQVqvZq/UA3MMgIlTKCDIrZAXrTf4if+2O5M3p/0pJP0WSQ2Xnyw+sP1GIQnTI4wF78EWUjRxCt9OjDYh3oIaPfMxKDJZCky7A/wW8iAx2qLrNfHha/xR03uA5H7Bv138etBhbfTJsHwPcFQPQzqfq/8vPqn3wHMwciAlP4f8wLBHHCz60Ho0BioSqKYewFgPSWz4TJxLT1+NrCv5X2sn7U35GV8X/GouWXSQVF/erfy3461TyyEAl9mDCvzk59NWVD/HUTzfAk9iCKfziH9scPZbQ/lDLn2iCk27CeBzU7LiawyDE/AQekpK8RFcAqcWuhg0rbQRWDANF13Dw1HGo99tcA5Wpz8Ssn/oB/CTsMgquc2E0iijDIbNVPQeYyvJmPvYTmUwOLobWZHn3BVhTJgcfgH3CHH09iDL6GXQj871Ck4zrrNXZ8/1A5Elh98ED7FawiT7pv5Q7CgtSJNw7DCN5BSJNSx4Ds4h+qPLv2o0kbSGmmoLTtDB+ataEzzFOIEopXsTvjGZI0PS2hh4dzFJ+QaNzGtyZoV8hlMXQyY0Otui43vdUufDlIP4E+M8t1fGRbs2yttThuIB482HYKfIRV09wh7UNw6u0VS/dAV8A1Pf4pBGFMPUt8SV4I5qmD20zme4xnWhIIgyrh2VDwvBGTC3td+IHFdKHYULD0/J3voKHsVrIbiCWtQZFk0IwZHRtSl72zqEAoBjKsVd6EIWUCcRo6C7bn4yP0ktrngGh36Y+BSTpZ9aFnYVJPd+lG3APebCNiEPlO90nFLYCMEev4Pn4OwATTvl0rMARxUTu3OqQH2wh/eZDT0lxfAD2CEul1Xj9YrchyR+QBZXYRUJAKcYeV/aSnGDtLDsoi/1AR3PAflXIvKvNK7x8Wnch4GFD6ykc/OaJ1pXX2PIGBPuKn7AOtYIj1Kr1xzJkDiqMOVi4F9RyQ3XxwFs0nHLw66pyMBXpPr3UetAFUfSU8o4MNFN5qYMHd0kaWqNm18601/G20IUcsESVoVfNCZs791B4rw6ErOD0/Ql6HXwRvV0sP3aGRQE9oR9bjXxAx8Zn6Cr4T1YE9g7rtIy3Sz9q/zkgT1hgW3Rl4ewRrAn7J4IMx9lUhQu57UI1oRRZGBT1FhJkfjxkCn4jkIhEwfzrAiugg0yZyvQFagvqQRhJrVWiByXDXInpsnrV6mcuKgh2c20o1uiRIkSJUqUKFGiRIkSJUqUKFGiRIkSvwRWou7kI0Zd3KrjMkcH99oTRluneXCSsmeTOo1su4XWmjBSelHiJYtg2cG9toRR6xbjLaODLfo/Vrs56zFh0zBjIc21loTp/jaLpmTJjBtmNsBz6LpnUKUnqsGPiZul00d1DK1osfGWMC35FxyRdWMJaS7J9R4llwoqTBp3JHk5JUnCQXU5zpNviBVULv9KX6eYbUuWNHYtvLOSegryKwthENVL25jowT1HJ3WTBJhMrmHVA+LhCMNpaKeiQh3dSSG4qCXLRPa0Y9sw498Iu+h8hew7QtROupHsIFlLxk9m2+jVDhbeGh2nidbHBDCI5HVS4RVhzqS5GGujUTiOjULUYVTB+TRQGzLiOJLWQCmUCzLtVvQjaa7jacOynoRpzNUzizZmKAnDZf7XzDV8W8P64A56bZvaA5XYxWLirEbr43gfp1eErUADKIT7YEoM03CXcPIaCXkv/6ykFG53hWjRpCo9VO6G1S7hiWuE6qF/hK2k6zrQDu5Wjk0W0Q5j7whbmTSXWstELjGAUP3yM1vBs+4QXgClxpJHXisKt/wkTAy/gWswvmO9i2XifJ8Jk46npAKmhihkymZURhs0/CSMrW6zPKlM2YgCcKwwJeJNT9ew4Cm4hpCjDfi06dVspJ3BpjhIvuDpGiZDcA0+I811iGGP2mPeQfJuRm9IUjY4o5AIR9Z0/dK7jGukzOl2U+oiPcVtcWhT1PUvRU37lsAtxHjnnVZOCGo6awtaluuiMzc7MQ0PPf3ArXC3ElB6ou8OQfdcUrXK2dS3FlZSae8lKlN+pXd0avkruIQUu7heXet7Lpkqd86/SYJfI2zL8dolMdevyKKg20bmlB/NSOPE78A6gkWJv1eNNj3ftJbmqsD3dGkuvwi7dyJTfwZbOA2TVjFL0M3oFh0z8CuBmEeaKx5VKb4Tvpcl1CrKlBxmEY+cHVVJ2N1zKUYqyV62OxnL1WjNRSriUklNuSSCBHwHWr192IlJRJfi3OpGCEy22V69MfsvPcUS0nTW4UnULKfy9vPI4KwLMhaUU+0HRuvZgJT3UpxYrxvqogoPxnzyJQj2Aj9EHz9wTxE1ri0a3ABUVaO2xS4alYoBaerLUBY21QAVugPR7iZW7JTtv6ORNkdYDkeV7OK7C8OjYhP2D4YxnJvfnWZbPEta0PGNj5GsJxigGwTh3jfULYStu3BHCsajkCciqAcWWN8e1zQw9hJyotiEaelTC2kulru4UmjC7Isaogc5Ufwp+YPWpOUxqMq6OtDtLzxhOv6kG4HO71ONVNjBxf+DNcKM9CkVNEQ76ejmxf/dncVWzhK5+gAAAABJRU5ErkJggg==" alt="裝飾性圖標" class="decorative-icon-2">
+      </div>      
+
+      <!-- 第三張卡片 -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="d-flex flex-md-column align-items-center justify-content-between mb-md-3">
+            <p class="card-order text-thirdly-100 text-center mb-md-4">03</p>
+            <div class="card-icon">
+              <img src="data:image/png;base64,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" class="card-img-top img-fluid" alt="Pay Icon">
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-md-center">
+            <h4 class="card-title fs-md-6 fs-7">確認與付款</h4>
+            <p class="card-text">
+              完成支付後，隨時接收寵物更新。我們的客服隨時待命，確保您的寵物得到最佳照顧。
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </section>
+</div>
+    <!-- 常見問題 / Joy -->
+    <section class="index-qna-cat-deco" id="index-qna">
+      <div class="container index-qna-content">
+        <div class="row justify-content-center">
+          <div class="col col-md-8 text-center">
+            <div class="index-qna-title-container">
+              <h2>常見問題</h2>
+            </div>
 
-    <footer class="footer">我是 footer</footer>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    預定寵物保母費用?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="text-start list-unstyled">
+                      <li>
+                        安親寄宿:媒合費用$ 300/12H 起,會依據毛小孩體型調整。
+                      </li>
+                      <li>
+                        到府保母:$ 300/次起,單次半小時。超過半小時需加購。
+                        遛狗服務:$
+                      </li>
+                      <li>
+                        200/次起,單次半小時。超過半小時需加購。 到府洗澡:$
+                      </li>
+                      <li class="mb-5">
+                        450/次起,費用會依據毛小孩種類與體型有所調整。
+                      </li>
+                      <li>
+                        *所有服務費用皆含「寵物保險」及「服務品質保障」,服務不滿意全額退款。
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    寵物保母服務包括哪些內容?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    我們的寵物保母服務包括餵食、散步、洗澡、遊戲和陪伴等。根據您的需求，我們也可以提供特定的服務，如藥物管理和訓練。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    如何預訂寵物保母服務?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    您可以通過我們的網站在線預訂,選擇合適的日期和時間,並提供您的寵物資料。我們會根據您的需求挑選合適的保母,供您選擇並預訂。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    如果我的寵物有特殊需求怎麼辦?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    在預訂時,請詳細告知我們您的寵物有何特殊需求,我們會根據需求選擇最合適的保母,確保您的寵物得到專業的照顧。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    那些地區有提供寵物保母服務?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    全台各地皆有寵物保母服務。
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold text-gray-200 bg-transparent"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSix"
+                  >
+                    我可以隨時和寵物保母聯絡,了解寵物情形嗎?
+                  </button>
+                </h3>
+                <div
+                  id="flush-collapseSix"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-start">
+                    是的,您可以通過我們的網站或
+                    App與保母進行溝通,了解您的寵物狀況。我們也會提供定期更新和照片,讓您隨時了解寵物的情況。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tim -->
+<footer class="footer bg-gradient-thirdly py-8 py-lg-16">
+  <div class="container">
+    <div
+      class="d-md-flex justify-content-md-between align-items-md-center mb-5 mb-md-10"
+    >
+      <div>
+        <a href="index.html" class="mb-3 mb-md-0 d-block">
+          <img
+            class="footer-logo"
+            src="/Pawfect/assets/logo-white-df83210a.svg"
+            alt=""
+          />
+        </a>
+        <div
+          class="footer-social-icons d-md-none pb-5 border-bottom border-light"
+        >
+          <a href="https://www.facebook.com/">
+            <img
+              class="me-2"
+              src="/Pawfect/assets/facebook-footer-1f362dbe.svg"
+              alt="facebook-icon"
+            />
+          </a>
+          <a href="https://x.com/">
+            <img
+              class="me-2"
+              src="/Pawfect/assets/twitter-footer-61326e0d.svg"
+              alt="twitter-icon"
+            />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src="/Pawfect/assets/ig-footer-f139b79f.svg" alt="ig-icon" />
+          </a>
+        </div>
+      </div>
+      <div class="pt-5 pt-md-0">
+        <div class="row">
+          <div class="col-6 col-md-auto mb-4 mb-md-0">
+            <a href="#" class="text-light fs-10 fs-md-9 opacity-70-hover transition-base">搜尋保母</a>
+          </div>
+          <div class="col-6 col-md-auto mb-4 mb-md-0">
+            <a href="#" class="text-light fs-10 fs-md-9 opacity-70-hover transition-base">成為保母</a>
+          </div>
+          <div class="col-6 col-md-auto">
+            <a href="#" class="text-light fs-10 fs-md-9 opacity-70-hover transition-base">常見問題</a>
+          </div>
+          <div class="col-6 col-md-auto">
+            <a href="#" class="text-light fs-10 fs-md-9 opacity-70-hover transition-base">登入註冊</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-md-flex justify-content-md-between pb-5 pb-md-10 border-bottom border-light"
+    >
+      <div class="d-md-flex">
+        <div class="text-light fs-10 fs-md-9 mb-4 mb-md-0 me-md-8">
+          <p class="fw-bold">信箱</p>
+          <a href="mailto:pawfectcare@gmail.com" class="text-light opacity-70-hover transition-base">
+            pawfectcare@gmail.com
+          </a>
+        </div>
+        <div class="text-light fs-10 fs-md-9">
+          <p class="fw-bold">電話</p>
+          <a href="tel:02-1234-5678" class="text-light opacity-70-hover transition-base">
+            02-1234-5678
+          </a>
+        </div>
+      </div>
+      <div class="footer-social-icons d-none d-md-block">
+        <a href="https://www.facebook.com/">
+          <img
+            class="me-4"
+            src="/Pawfect/assets/facebook-footer-1f362dbe.svg"
+            alt="facebook-icon"
+          />
+        </a>
+        <a href="https://x.com/">
+          <img
+            class="me-4"
+            src="/Pawfect/assets/twitter-footer-61326e0d.svg"
+            alt="twitter-icon"
+          />
+        </a>
+        <a href="https://www.instagram.com/">
+          <img src="/Pawfect/assets/ig-footer-f139b79f.svg" alt="ig-icon" />
+        </a>
+      </div>
+    </div>
+    <div class="pt-5 pt-md-10 text-light text-center">
+      <p class="fs-11 fs-md-10">© 2024 Pawfect Care. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+    <a href="#" class="index-fixed-button bg-primary border border-light rounded-circle
+      d-flex justify-content-center align-items-center text-light fs-11 fs-md-10">
+      立即預約<br>完美保母
+    </a>
+    
     
   </body>
 </html>

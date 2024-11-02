@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    
+    <script type="module" crossorigin src="/Pawfect/assets/booking-861c94fe.js"></script>
+    <link rel="modulepreload" crossorigin href="/Pawfect/assets/air-datepicker-9a8d606c.js">
+    <link rel="stylesheet" href="/Pawfect/assets/air-datepicker-b5095b77.css">
+  </head>
+
+  <body>
+    <!-- Chung -->
+<nav class="navbar sticky-top bg-light navbar-expand-lg py-lg-4 py-3" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><picture>
+            <source srcset="/Pawfect/assets/layout-header-logo-550bb4f3.png "
+                    media="(min-width: 796px)">
+            <img src="data:image/png;base64,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">
+          </picture>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header header-nav-bg-color p-3">
+                <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt="logo"></a>
+                <button type="button" class="ms-auto btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-3 px-lg-0 header-nav-bg-color">
+                <ul class="navbar-nav flex-grow-1 mb-12 mb-lg-0">
+                    <li class="nav-item my-8 my-lg-0 mx-lg-11">
+                    <a class="nav-link link-gray-100" href="search.html">搜尋保母</a>
+                    </li>
+                    <li class="nav-item mb-8 mb-lg-0 me-lg-11">
+                    <a class="nav-link link-gray-100" href="#">成為保母</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link link-gray-100" href="#index-qna">常見問題</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column-reverse h-100 flex-lg-row align-items-center">
+                    <img class="d-lg-none d-block mt-auto" src="/Pawfect/assets/layout-header-woman-c4590fd5.png" alt="woman">
+                    <a class="d-lg-none btn btn-outline-primary w-100" href="#">登入</a>
+                    <a class="d-none d-lg-block flex-shrink-0 me-6" href="#">登入</a>
+                    <a class="btn btn-primary w-100 w-lg-auto text-white mb-3 mb-lg-0">註冊</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section>
+      <div class="booking-banner">
+        <!--以上要放背景-->
+        <div class="container booking-banner-container-padding">
+          <div class="row justify-content-center d-flex">
+            <!-- Left column -->
+            <div class="col-md-8 d-flex flex-column mt-mobile-32">
+              <!--swiper-->
+              <div
+                class="card flex-grow-1 border-0 bg-transparent mb-8 mb-md-16"
+              >
+                <!-- Main Swiper -->
+                <div
+                  class="swiper mySwiper2 mb-1"
+                  style="
+                    --swiper-navigation-color: #fff;
+                    --swiper-pagination-color: #fff;
+                  "
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎1-abf0327d.jpeg"
+                        alt="莉莎1"
+                        class="booking-banner-radius"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎2-efed3e21.jpeg"
+                        alt="莉莎2"
+                        class="booking-banner-radius"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎3-c1d8d6d8.png"
+                        alt="莉莎3"
+                        class="booking-banner-radius"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎4-5b109071.jpeg"
+                        alt="莉莎4"
+                        class="booking-banner-radius"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Custom Swiper Navigation -->
+                  <div class="custom-swiper-next">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+                  <div class="custom-swiper-prev">
+                    <i class="bi bi-arrow-left"></i>
+                  </div>
+                </div>
+
+                <!-- Thumbnail Swiper -->
+                <div thumbsSlider="" class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎縮圖1-06db73b9.svg"
+                        alt="莉莎1縮圖"
+                        class="booking-banner-radius-thumb"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎縮圖1-06db73b9.svg"
+                        alt="莉莎2縮圖"
+                        class="booking-banner-radius-thumb"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎縮圖3-2fa8228f.svg"
+                        alt="莉莎3縮圖"
+                        class="booking-banner-radius-thumb"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="/Pawfect/assets/莉莎縮圖4-f0052502.svg"
+                        alt="莉莎4縮圖"
+                        class="booking-banner-radius-thumb"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--swiper card mobile-->
+              <div
+                class="card booking-banner-card booking-banner-radius mb-8 d-md-none"
+              >
+                <div class="card-body d-flex flex-column p-6">
+                  <!-- Profile Info -->
+                  <div class="d-flex align-items-center mb-2">
+                    <img
+                      src="/Pawfect/assets/i_profile-3904049f.png"
+                      alt="會員照片"
+                      class="me-2"
+                    />
+                    <h3
+                      class="card-title m-0 fs-lg-3 fs-6 fw-bold text-gray-200"
+                    >
+                      莉莎的家
+                    </h3>
+                  </div>
+
+                  <!-- Ratings and Location -->
+                  <div class="d-flex gap-4 mb-2 fs-10">
+                    <div>
+                      <i class="bi bi-star-fill text-primary"></i>
+                      <span class="fw-bold text-primary">4.6</span>
+                    </div>
+                    <div>
+                      <i class="bi bi-geo-alt-fill text-gray-500"></i>
+                      <span class="text-gray-500">中山區,台北市 (5.3km)</span>
+                    </div>
+                    <div>
+                      <i class="bi bi-person-fill text-gray-500"></i>
+                      <span class="text-gray-500">12</span>
+                    </div>
+                  </div>
+
+                  <!-- Introduction -->
+                  <p class="card-text mb-4 fs-md-10 fs-lg-9">
+                    大家好，莉莎的家是有六年經驗的專業寵物保母。我從小就熱愛動物，並照顧過超過50隻狗狗和貓咪。參加過多次寵物急救訓練，熟悉動物行為學，能應對各種突發情況。我相信每一隻寵物都有獨特需求，所以我會盡心提供最適合牠們的照顧，讓它們感到安心。
+                  </p>
+
+                  <!-- Booking Call to Action -->
+                  <div class="booking-banner-lead">
+                    <span class="d-block mb-2 text-center text-gray-500 fs-10">
+                      在過去的48小時內，已經收到了十筆預約。
+                    </span>
+                    <a
+                      href="#"
+                      class="btn booking-banner-btn booking-primary-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#bookingModal"
+                      >立即預約</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!--service-->
+              <div class="mb-8 mb-md-16">
+                <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">
+                  我能為您的寶貝做什麼?
+                </h3>
+                <!-- Service Card 1 -->
+                <div class="card booking-service-card">
+                  <div
+                    class="card-body d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="/Pawfect/assets/i_遛狗散步-1f42bd3d.svg"
+                        alt="溜狗散步"
+                        class="me-3"
+                      />
+                      <span class="fw-bold fs-7 text-primary">遛狗散步</span>
+                    </div>
+                    <span>
+                      <strong class="fw-bold fs-7 text-gray-200"
+                        >NT $550</strong
+                      >
+                      <span class="fs-11 text-gray-500">每次</span>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="card booking-service-card">
+                  <div
+                    class="card-body d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="/Pawfect/assets/i_上門餵食-09413153.svg"
+                        alt="上門餵食"
+                        class="me-3"
+                      />
+                      <span class="fw-bold fs-7 text-secondary">上門餵食</span>
+                    </div>
+                    <span>
+                      <strong class="fw-bold fs-7 text-gray-200"
+                        >NT $300</strong
+                      >
+                      <span class="fs-11 text-gray-500">每次</span>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="card booking-service-card">
+                  <div
+                    class="card-body d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="/Pawfect/assets/i_日間托養-a67687cd.svg"
+                        alt="日間托養"
+                        class="me-3"
+                      />
+                      <span class="fw-bold fs-7 text-thirdly">日間托養</span>
+                    </div>
+                    <span>
+                      <strong class="fw-bold fs-7 text-gray-200"
+                        >NT $1000</strong
+                      >
+                      <span class="fs-11 text-gray-500">每次</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!--time-->
+              <div class="mb-8 mb-md-16 text-gray-200">
+                <h3 class="fs-7 fs-lg-4 mb-4">可服務時間</h3>
+                <ul class="d-flex list-unstyled gap-4 fs-8">
+                  <li>週日</li>
+                  <li>週一</li>
+                  <li>週二</li>
+                  <li>週三</li>
+                  <li>週四</li>
+                  <li>週五</li>
+                  <li>週六</li>
+                </ul>
+              </div>
+              <!--review-->
+              <div>
+                <h3 class="fs-7 fs-lg-4 mb-4 text-gray-200">毛爸媽的心聲</h3>
+                <!-- Review Card 1 -->
+                <div class="card booking-review-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="/Pawfect/assets/i_劉曉華-ec6a1961.svg"
+                          alt="劉曉華profile"
+                          class="me-3"
+                        />
+                        <div>
+                          <span class="d-block fw-bold fs-8 text-gray-200"
+                            >劉曉華</span
+                          >
+                          <span class="d-block fs-10 text-gray-500"
+                            >遛狗散步·2024年6月22日</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-primary">
+                        <i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <span class="text-gray-300"
+                      >雅雯對我的小狗旺旺非常有愛心，每天都會帶牠去散步和玩耍，旺旺回來後總是很開心。</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="card booking-review-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="/Pawfect/assets/i_張怡君-c99a2a1b.svg"
+                          alt="張怡君profile"
+                          class="me-3"
+                        />
+                        <div>
+                          <span class="d-block fw-bold fs-8 text-gray-200"
+                            >張怡君</span
+                          >
+                          <span class="d-block fs-10 text-gray-500"
+                            >上門餵食·2024年5月12日</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-primary">
+                        <i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star"></i>
+                      </div>
+                    </div>
+                    <span class="text-gray-300"
+                      >我的貓咪米米在雅雯的照顧下變得很放鬆，她知道如何讓米米感到安全和受到愛護。</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="card booking-review-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="/Pawfect/assets/i_陳建忠-b61e2d6c.svg"
+                          alt="陳建忠profile"
+                          class="me-3"
+                        />
+                        <div>
+                          <span class="d-block fw-bold fs-8 text-gray-200"
+                            >陳建忠</span
+                          >
+                          <span class="d-block fs-10 text-gray-500"
+                            >上門餵食·2024年4月27日</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-primary">
+                        <i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <span class="text-gray-300"
+                      >因為出國一週所以沒辦法照顧家裡的毛小孩，還好有雅雯的上門餵食服務，不得不說雅雯真的很貼心，通常我家那隻在陌生人面前是不太敢吃東西的，但因為雅雯的溫柔安撫，結果竟然吃得比平常還多！</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="card booking-review-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="/Pawfect/assets/i_黃美玲-53a0c24c.svg"
+                          alt="黃美玲profile"
+                          class="me-3"
+                        />
+                        <div>
+                          <span class="d-block fw-bold fs-8 text-gray-200"
+                            >黃美玲</span
+                          >
+                          <span class="d-block fs-10 text-gray-500"
+                            >日間托養·2024年2月16日</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-primary">
+                        <i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i
+                        ><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                    <span class="text-gray-300"
+                      >前陣子經常加班很晚回家，擔心家裡的毛小孩沒人照顧所以上網尋找日間托養的服務，很幸運遇到雅雯，讓我白天能放心的將毛小孩交給她照顧。</span
+                    >
+                  </div>
+                </div>
+
+                <!-- More Reviews -->
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body">
+                    <div class="mb-4 text-center fw-bold text-primary">
+                      <span>看更多卡片</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column (Sticky) -->
+            <div class="col-md-4 d-flex mt-8 mt-md-0 d-none d-md-block">
+              <div class="sticky-top booking-banner-sticky vh-100">
+                <div class="card booking-banner-card booking-banner-radius">
+                  <div class="card-body d-flex flex-column p-6">
+                    <!-- Profile Info -->
+                    <div class="d-flex align-items-center mb-2">
+                      <img
+                        src="/Pawfect/assets/i_profile-3904049f.png"
+                        alt="會員照片"
+                        class="me-2"
+                      />
+                      <h3
+                        class="card-title m-0 fs-lg-3 fs-6 fw-bold text-gray-200"
+                      >
+                        莉莎的家
+                      </h3>
+                    </div>
+
+                    <!-- Ratings and Location -->
+                    <div class="d-flex gap-4 mb-2 fs-10">
+                      <div>
+                        <i class="bi bi-star-fill text-primary"></i>
+                        <span class="fw-bold text-primary">4.6</span>
+                      </div>
+                      <div>
+                        <i class="bi bi-geo-alt-fill text-gray-500"></i>
+                        <span class="text-gray-500">中山區,台北市 (5.3km)</span>
+                      </div>
+                      <div>
+                        <i class="bi bi-person-fill text-gray-500"></i>
+                        <span class="text-gray-500">12</span>
+                      </div>
+                    </div>
+
+                    <!-- Introduction -->
+                    <p class="card-text mb-2 fs-md-10 fs-lg-9">
+                      大家好，莉莎的家是有六年經驗的專業寵物保母。我從小就熱愛動物，並照顧過超過50隻狗狗和貓咪。參加過多次寵物急救訓練，熟悉動物行為學，能應對各種突發情況。我相信每一隻寵物都有獨特需求，所以我會盡心提供最適合牠們的照顧，讓它們感到安心。
+                    </p>
+
+                    <!-- Booking Call to Action -->
+                    <div class="booking-banner-lead">
+                      <span
+                        class="d-block mb-2 text-center text-gray-500 fs-10"
+                      >
+                        在過去的48小時內，已經收到了十筆預約。
+                      </span>
+                      <a
+                        href="#"
+                        class="btn booking-banner-btn booking-primary-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        >立即預約</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--以下要關背景-->
+      </div>
+    </section>
+    <!-- Booking Modal -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered booking-modal-dialog">
+        <div class="modal-content px-3 pt-6 pb-8">
+          <div
+            class="modal-header border-0 justify-content-center d-flex position-relative"
+          >
+            <h3
+              class="modal-title position-absolute booking-model-title"
+              id="bookingModalLabel"
+            >
+              預約資訊
+            </h3>
+          </div>
+
+          <!-- Date Picker -->
+          <div class="modal-body">
+            <div>
+              <label for="date-picker-phone" class="form-label text-gray-500"
+                >選擇日期</label
+              >
+              <div class="position-relative">
+                <input
+                  type="text"
+                  id="date-picker-phone"
+                  class="form-control booking-custom-form-control w-100"
+                  readonly
+                  placeholder="日期"
+                />
+                <span
+                  class="position-absolute top-50 end-0 translate-middle-y pe-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill="none"
+                      stroke="#9e9e9e"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2 5l6 6 6-6"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Time Slot Selection -->
+            <div>
+              <label for="bookingDateSelect" class="form-label text-gray-500"
+                >選擇時段</label
+              >
+              <select
+                class="form-select booking-custom-form-select"
+                id="bookingDateSelect"
+              >
+                <option selected>時段</option>
+                <option value="1">週一</option>
+                <option value="2">週二</option>
+                <option value="3">週三</option>
+                <option value="4">週四</option>
+                <option value="5">週五</option>
+                <option value="6">週六</option>
+                <option value="7">週日</option>
+              </select>
+            </div>
+
+            <!-- Service Selection -->
+            <div class="booking-divider">
+              <label for="bookingDateSelect" class="form-label text-gray-500"
+                >選擇服務</label
+              >
+              <select
+                class="form-select booking-custom-form-control"
+                id="bookingDateSelect"
+              >
+                <option selected>服務</option>
+                <option value="1">遛狗散步</option>
+                <option value="2">上門餵食</option>
+                <option value="3">日間托養</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer border-0 d-flex justify-content-center pt-0">
+            <a
+              type="button"
+              class="btn fw-bold booking-outlined-primary-btn py-2 px-6 d-inline-block"
+              style="line-height: 1.6"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </a>
+            <a
+              href="payment.html"
+              class="btn fw-bold booking-primary-btn py-2 px-6 d-inline-block"
+              style="line-height: 1.6"
+            >
+              預約
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </body>
+</html>

@@ -212,10 +212,6 @@
     font-size: 4rem;
   }
 
-  .card-icon {
-    margin: 0 auto 1.5rem auto;
-  }
-
   .card-icon img {
     width: 140px;
     height: 100px;
@@ -247,7 +243,7 @@
   }
 
   .decorative-icon-2 {
-    transform: rotate(120deg);
+    transform: rotate(90deg);
     transition: transform 0.3s; /* 為圖標添加過渡效果 */
   }
 
@@ -261,6 +257,7 @@
 
 .index-qna {
   &-cat-deco {
+    background-color: $gray-1000;
     background-image: url("../../assets/images/貓mobile.png");
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -284,11 +281,11 @@
   }
 
   &-content {
-    margin-top: 2.5rem;
+    padding-top: 2.5rem;
     padding-bottom: 188px;
     position: relative;
     @include media-breakpoint-up(md) {
-      margin-top: 7.5rem;
+      padding-top: 7.5rem;
       padding-bottom: 12.5rem;
     }
   }

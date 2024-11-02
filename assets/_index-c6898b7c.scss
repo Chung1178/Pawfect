@@ -1,0 +1,348 @@
+//  banner / Chung
+.index-banner-bg {
+  background-image: url("../images/保母sm.png"),
+    url("../images/index-banner-貓sm.png");
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0, left 13.8% top 0;
+  @include media-breakpoint-up(lg) {
+    background-image: url("../images/保母.png"),
+      url("../images/index-banner-貓.png");
+    background-position: right 15% bottom 0, left 43% top 0;
+  }
+}
+
+.index-banner {
+  height: 288px;
+  @include media-breakpoint-up(lg) {
+    height: 478px;
+  }
+  .dropdown-menu {
+    top: 8px !important;
+  }
+
+  .type-select-btn {
+    color: $gray-300;
+    border-bottom: 3px solid transparent;
+    &:hover,
+    &.active {
+      color: $primary;
+    }
+    &.active {
+      border-bottom: 3px solid $primary;
+    }
+  }
+  .city-select-container {
+    height: 150px;
+    overflow-y: scroll;
+  }
+  #date-picker-desk,
+  #date-picker-phone {
+    cursor: pointer;
+  }
+  #date-picker-desk:focus,
+  #date-picker-phone:focus {
+    outline: none;
+  }
+}
+//  保母服務 / Joy
+
+.index-service {
+  &-content {
+    background: linear-gradient(90deg, #fff7f0 0%, #ffffff 50%, #fff7f0 100%);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 164px;
+      padding-bottom: 7.5rem;
+    }
+    h2 {
+      text-align: center;
+      color: $primary;
+      margin-bottom: 2rem;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &-list {
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      margin-bottom: 4rem;
+      justify-content: center;
+    }
+  }
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    //make mobile width 300px
+    img {
+      width: 300px;
+      max-width: 100%;
+      @include media-breakpoint-up(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-lead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      margin-bottom: 0.25rem;
+      color: $gray-200;
+      font-weight: bold;
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 1.25rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid $primary;
+        text-align: left;
+      }
+    }
+    p {
+      color: $gray-300;
+    }
+  }
+}
+
+//  毛孩爸媽怎麼說 / Tim
+.index-comment {
+  @include media-breakpoint-up(md) {
+    background-image: url("../images/bg-comment-1.png"),
+      url("../images/bg-comment-2.png"), url("../images/dog.png"),
+      url("../images/bg-comment-3.png");
+    background-repeat: no-repeat;
+    background-position: left 68% top 0%, left 0 bottom 0, left 45px bottom 0,
+      left 2px bottom 0;
+  }
+}
+
+//  預定體驗 / Grace
+.order-process {
+  background: linear-gradient(90deg, #FFF7F0 0%, #FFFFFF 50%, #FFF7F0 100%);
+
+  /* 設定 RWD 格線系統 */
+  .row {
+    display: flex;
+    /* 確保卡片能換行 */
+    flex-wrap: wrap;
+  }
+
+  /* 大於992px 時，卡片顯示為三欄式 */
+  @media (min-width: 992px) {
+    .col-lg-4, .col-md-4, .col-sm-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin: 10px;
+    }
+  }
+
+   /* 小於767px 時，卡片顯示為單欄式 */
+   @media (max-width: 767px) {
+    .col-md-4 {
+      flex: 0 0 calc(90% - 48px);
+      max-width: calc(90% - 48px);
+      margin: 10px 24px;
+    }
+  }
+
+  .index-order-container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* 調整小螢幕樣式 */
+  @media (max-width: 576px) {
+    .pawfect-title {
+      font-size: 2rem;
+    }
+
+    .pawfect-subtitle {
+      font-size: 1rem;
+    }
+
+    .card-order {
+      font-size: 3rem;
+    }
+
+    .decorative-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .pawfect-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $primary;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .pawfect-subtitle {
+    font-size: 1.25rem;
+    color: $gray-300;
+    margin-bottom: 3rem;
+    text-align: center; // 副標題置中
+  }
+
+  /* 確保卡片等高 */
+  .order-process .row {
+    display: flex; /* 將 row 設為 flex 排版 */
+    flex-wrap: wrap; /* 允許卡片換行 */
+    justify-content: center; /* 水平置中 */
+    align-items: stretch; /* 讓卡片等高 */
+  }
+
+  /* 確保圖標在卡片之間置中 */
+  .col-md-auto {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 垂直置中 */
+  }
+
+  .card-order {
+    font-weight: bold;
+    font-size: 4rem;
+  }
+
+  .card-icon img {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  /* 卡片樣式：確保所有卡片等高 */
+  .card {
+    display: flex; /* 新增：使用 flex 排版 */
+    flex-direction: column; /* 新增：垂直排列內容 */
+    justify-content: space-between; /* 新增：內容在卡片內平均分布 */
+    padding: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .decorative-icon-1 {
+    transition: transform 0.3s;
+  }
+
+  .decorative-icon-1:hover {
+    transform: rotate(120deg);
+  }
+
+  .decorative-icon-2 {
+    transform: rotate(90deg);
+    transition: transform 0.3s; /* 為圖標添加過渡效果 */
+  }
+
+  .decorative-icon-2:hover {
+    transform: rotate(15deg);
+  }
+}
+
+
+//  常見問題 / Joy
+
+.index-qna {
+  &-cat-deco {
+    background-color: $gray-1000;
+    background-image: url("../../assets/images/貓mobile.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-top: 2.25rem;
+    @include media-breakpoint-up(lg) {
+      background-image: url("../../assets/images/貓web.png");
+      background-repeat: no-repeat;
+      background-position: right 2px bottom 0;
+    }
+    .accordion-item {
+      background-color: transparent !important;
+    }
+    .accordion-button {
+      &:hover {
+        color: $primary !important;
+      }
+      &:not(.collapsed):hover {
+        color: $gray-200 !important;
+      }
+    }
+  }
+
+  &-content {
+    padding-top: 2.5rem;
+    padding-bottom: 188px;
+    position: relative;
+    @include media-breakpoint-up(md) {
+      padding-top: 7.5rem;
+      padding-bottom: 12.5rem;
+    }
+  }
+
+  &-title-container {
+    position: relative;
+    display: inline-block;
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      color: $gray-200;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 4.5rem;
+      }
+    }
+    h2::before {
+      font-family: "Material Icons";
+      font-size: 16px;
+      color: $gray-200;
+      content: "pets";
+      position: absolute;
+      top: -24px;
+      right: -32px;
+      letter-spacing: 1rem;
+      transform: rotate(5deg);
+    }
+    h2::after {
+      font-family: "Material Icons";
+      font-size: 24px;
+      color: $gray-200;
+      content: "pets";
+      position: absolute;
+      top: -14px;
+      right: -41px;
+      transform: rotate(42deg);
+    }
+  }
+}
+
+// fixed button
+
+.index-fixed-button {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  width: 72px;
+  height: 72px;
+  z-index: 1010;
+  text-shadow: 0px 0px 24px $light;
+  box-shadow: 0px 4px 80px 0px $primary;
+  @include media-breakpoint-up(md) {
+    right: 48px;
+    bottom: 48px;
+    width: 84px;
+    height: 84px;
+  }
+}
